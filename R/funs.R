@@ -340,3 +340,23 @@ picture_stream<-tibble(
   LAG_BEH = lag(BEH)
 )
 
+#
+
+two_person_picture<-tibble(
+  VIDELT = c(rep(1,15),rep(2,15)),
+  TAR = c(rep("ABE",15),rep("JAN",15)),
+  BEH = c("x","x","x","o", #4
+          "A", #1
+          "o","x","o", #3
+          "A", #1
+          "o","o","x","x","o","o", #6
+          "x","x","x","o", #4
+          "A",
+          "o","x","o",
+          "A",
+          "o","o","x","x","o","o"),  #7
+  LAG_BEH = lag(BEH)
+)
+
+
+
