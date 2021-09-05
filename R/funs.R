@@ -304,7 +304,13 @@ recounter<-function(data,behaviorstream,
   }}
 
 
-myfun2 <-function(x,y) { (x+y) / y}
+group_splitter <- function(data, behaviorstream, behavior,consequence,
+                           group,
+                           actor = NULL, missing_data = NULL,
+                           contingency = NULL){
+  # this just splits the data frame
+  split_df<-split(data, data[,group])
+}
 
 myfun3 <-function(a,b,c) {tibble(a,b,c)}
 
