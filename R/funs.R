@@ -337,7 +337,7 @@ elevator<-tidyr::tibble(
 
 
 # Note this is all contingent
-picture_stream<-tibble(
+picture_stream<-tidyr::tibble(
   VIDELT = rep(2,25),
   TAR = rep("S",25),
   BEH = c("x","x","x","o", #4
@@ -352,7 +352,7 @@ picture_stream<-tibble(
 
 #
 
-two_person_picture<-tibble(
+two_person_picture<-tidyr::tibble(
   VIDELT = c(rep(1,15),rep(2,15)),
   TAR = c(rep("ABE",15),rep("JAN",15)),
   BEH = c("x","x","x","o", #4

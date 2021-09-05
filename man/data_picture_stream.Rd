@@ -2,7 +2,7 @@
 \alias{picture_stream}
 \docType{data}
 \title{
-Picture Stream (from thesis example)
+picture
 }
 \description{
 All reinforcement is contingent in this scenario
