@@ -309,7 +309,11 @@ group_splitter <- function(data, behaviorstream, behavior,consequence,
                            actor = NULL, missing_data = NULL,
                            contingency = NULL){
   # this just splits the data frame
-  split_df<-split(data, data[,group])
+  split(data, data[,group])
+
+  # test
+  #group_wise_test(two_person_picture,BEH, "x","A",group = "VIDELT", actor = "TAR")
+
 }
 
 myfun3 <-function(a,b,c) {tibble(a,b,c)}
