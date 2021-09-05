@@ -326,3 +326,17 @@ elevator<-tidyr::tibble(
 )
 
 
+# Note this is all contingent
+picture_stream<-tibble(
+  VIDELT = rep(2,25),
+  TAR = rep("S",25),
+  BEH = c("x","x","x","o", #4
+          "A", #1
+          "o","x","o", #3
+          "A", #1
+          "o","o","x","x","o","o","x","o", #8
+          "A", #1
+          "o","o","o","o","o","o","x"),  #7
+  LAG_BEH = lag(BEH)
+)
+
