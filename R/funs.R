@@ -331,8 +331,7 @@ elevator<-tidyr::tibble(
           "A",
           "o","x","x","x",
           "A",
-          "o","o","o","x"),
-  LAG_BEH = lag(BEH)
+          "o","o","o","x")
 )
 
 
@@ -346,8 +345,7 @@ picture_stream<-tidyr::tibble(
           "A", #1
           "o","o","x","x","o","o","x","o", #8
           "A", #1
-          "o","o","o","o","o","o","x"),  #7
-  LAG_BEH = lag(BEH)
+          "o","o","o","o","o","o","x")
 )
 
 #
@@ -364,8 +362,7 @@ two_person_picture<-tidyr::tibble(
           "A",
           "o","x","o",
           "A",
-          "o","o","x","x","o","o"),  #7
-  LAG_BEH = lag(BEH)
+          "o","o","x","x","o","o")
 )
 
 
