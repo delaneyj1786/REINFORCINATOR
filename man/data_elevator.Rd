@@ -2,7 +2,7 @@
 \alias{elevator}
 \docType{data}
 \title{
-%%   ~~ data name/kind ... ~~
+elevator data
 }
 \description{
 Elevator Dataset

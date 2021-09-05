@@ -8,7 +8,8 @@ myfun3 <-function(a,b,c) {tibble(a,b,c)}
 
 #################
 ## DATASETS #############
-elevator<-tibble(
+
+elevator<-tidyr::tibble(
   VIDELT = rep(2,14),
   TAR = rep("S",14),
   BEH = c("o","x",

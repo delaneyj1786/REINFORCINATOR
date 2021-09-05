@@ -1,2 +1,2 @@
 exportPattern("^[[:alpha:]]+")
-import(tidyverse)
+import(tidyverse,tidyr)
