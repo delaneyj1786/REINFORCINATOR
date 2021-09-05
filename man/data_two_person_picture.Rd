@@ -2,7 +2,7 @@
 \alias{two_person_picture}
 \docType{data}
 \title{
-%%   ~~ data name/kind ... ~~
+Picture Data replicated with another individual
 }
 \description{
 %%  ~~ A concise (1-5 lines) description of the dataset. ~~
