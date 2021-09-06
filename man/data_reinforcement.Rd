@@ -26,6 +26,6 @@ An example dataset to illustrate how reinforcement may appear in a one person ob
 }
 \examples{
 data(reinforcement)
-## maybe str(data_reinforcement) ; plot(reinforcement) ...
+## maybe str(reinforcement) ; plot(reinforcement) ...
 }
 \keyword{datasets}
