@@ -39,7 +39,8 @@ group_splitter(x)
 James DeLaney
 }
 \note{
-%%  ~~further notes~~
+Only data and group are used arguments.
+Version 2 will omit all other arguments (intended for the recounting function)
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
