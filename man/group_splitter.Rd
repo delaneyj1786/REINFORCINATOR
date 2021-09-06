@@ -12,7 +12,14 @@ group_splitter(x)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-    \item{VIDELT}{a numeric vector indicating the observational episode}
+    \item{data}{A dataframe or tibble}
+    \item{behaviorstream}{A column representing the observation stream. Contains actor behaviors and environmental (or partner) consequences}
+    \item{behavior}{A character string indicating the target behavior to be reinforced}
+    \item{consequence}{A character string indicating the environmental consequence acting as a reinforcer}
+    \item{group}{A column representing the variable used to group observation}
+    \item{actor}{An optional argument indicating the column containing the actor ID}
+    \item{missing_data}{An optional argument specifying if missing observations have been removed}
+    \item{contingency}{An optional argument indicating if reinforcers must be contingent or contiguous to target behaviors}
 }
 
 \details{
