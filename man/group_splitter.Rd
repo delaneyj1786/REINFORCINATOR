@@ -5,7 +5,7 @@
 group_splitter
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+A helper function converting a behaviorstream dataframe into a list split by a grouping factor (e.g., Video ID or Target ID). The resulting dataset is to be used by the recounter function
 }
 \usage{
 group_splitter(x)
