@@ -5,14 +5,15 @@
 punishment data
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+An example dataset to illustrate how punishment may appear in a one person observation stream.
 }
 \usage{data("punishment")}
 \format{
-  A data frame with 0 observations on the following 2 variables.
+  A data frame with 11 observations (10 behaviors) on the following 3 variables.
   \describe{
-    \item{\code{x}}{a numeric vector}
-    \item{\code{y}}{a numeric vector}
+    \item{\code{VIDELT}}{a numeric vector indicating the observational episode}
+    \item{\code{TAR}}{a character vector indicating the actor being observed}
+    \item{\code{BEH}}{a character vector indicating the behavior is target ('o'), reinforcer ('A') or behavioral non-target ('x')}
   }
 }
 \details{
