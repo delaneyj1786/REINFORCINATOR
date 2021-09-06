@@ -1,5 +1,5 @@
-\name{data_reinforcement}
-\alias{data_reinforcement}
+\name{reinforcement}
+\alias{reinforcement}
 \docType{data}
 \title{
 Reinforcement Data
@@ -7,7 +7,7 @@ Reinforcement Data
 \description{
 An example dataset to illustrate how reinforcement may appear in a one person observation stream.
 }
-\usage{data("data_reinforcement")}
+\usage{data("reinforcement")}
 \format{
   A data frame with 11 observations (10 behaviors) on the following 3 variables.
   \describe{
@@ -25,7 +25,7 @@ An example dataset to illustrate how reinforcement may appear in a one person ob
 %%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
-data(data_reinforcement)
-## maybe str(data_reinforcement) ; plot(data_reinforcement) ...
+data(reinforcement)
+## maybe str(data_reinforcement) ; plot(reinforcement) ...
 }
 \keyword{datasets}
