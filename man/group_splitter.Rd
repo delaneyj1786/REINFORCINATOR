@@ -36,7 +36,7 @@ group_splitter(x)
 %% ~put references to the literature/web site here ~
 }
 \author{
-%%  ~~who you are~~
+James DeLaney
 }
 \note{
 %%  ~~further notes~~
