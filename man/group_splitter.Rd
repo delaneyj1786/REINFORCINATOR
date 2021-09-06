@@ -12,10 +12,9 @@ group_splitter(x)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
+    \item{VIDELT}{a numeric vector indicating the observational episode}
 }
-}
+
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
