@@ -5,14 +5,15 @@
 elevator data
 }
 \description{
-Elevator Dataset
+An example dataset to illustrate how the arrival of an elevator may affect subsequent operation of this elevator.
 }
 \usage{data("elevator")}
 \format{
-  A data frame with 0 observations on the following 2 variables.
+  A data frame with 14 observations on the following 3 variables.
   \describe{
-    \item{\code{x}}{a numeric vector}
-    \item{\code{y}}{a numeric vector}
+    \item{\code{VIDELT}}{a numeric vector indicating the segment or episode of observations}
+    \item{\code{TAR}}{a character vector indicating the ID of the person using the elevator}
+    \item{\code{BEH}}{a character vector indicating whether the elevator was called (o), non-arrival (x), or arrival (A). }
   }
 }
 \details{
