@@ -2,7 +2,7 @@
 \alias{punishment}
 \docType{data}
 \title{
-punishment data
+Punishment Data
 }
 \description{
 An example dataset to illustrate how punishment may appear in a one person observation stream.
