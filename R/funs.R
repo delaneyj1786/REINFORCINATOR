@@ -533,3 +533,34 @@ two_person_picture<-tidyr::tibble(
 
 
 
+noeffect<-tidyr::tibble(
+  VIDELT = rep(2,11),
+  TAR = rep("ABE",11),
+  BEH = c("o","x","x", #4
+          "A", #1
+          "o","x","x", #3
+          "A", #1
+          "o","x","x")
+)
+
+
+punishment<-tibble(
+  VIDELT = rep(2,11),
+  TAR = rep("ABE",11),
+  BEH = c("o","o","o", #4
+          "A", #1
+          "o","o","x", #3
+          "A", #1
+          "o","x","x")
+)
+
+
+reinforcement<-tibble(
+  VIDELT = rep(2,11),
+  TAR = rep("ABE",11),
+  BEH = c("o","x","x", #4
+          "A", #1
+          "o","o","x", #3
+          "A", #1
+          "o","o","o")
+)
