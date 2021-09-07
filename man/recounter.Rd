@@ -18,7 +18,6 @@ recounter(x)
     \item{behaviorstream}{A column representing the observation stream. Contains actor behaviors and environmental (or partner) consequences}
     \item{behavior}{A character string indicating the target behavior to be reinforced}
         \item{consequence}{A character string indicating the environmental consequence acting as a reinforcer}
-            \item{group}{A column representing the variable used to group observation}
     \item{actor}{An optional argument indicating the column containing the actor ID}
     \item{missing_data}{An optional argument specifying if missing observations have been removed}
     \item{contingency}{An optional argument indicating if reinforcers must be contingent or contiguous to target behaviors}
@@ -27,11 +26,11 @@ recounter(x)
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns a list containing
+ \item{descriptive_statistics}{A list containing the following descriptive statistics}
+ \item{desciptive_statistics_n_obs} {(number of total observations)}
+ \item{2. n_tar (number of target behaviors) 3. n_reinf (number of reinforcers) 4. n_actor (number of unique actor ID), 5. n_cont (number of reinforcers occuring contiguous with target behavior) 6. reinf_index (the observation corresponding to each reinforcer) 7. contingency_index (the observation corresponding to each contiguous reinforcer) 8. na_index (observations corresponding to missing values) 9. prob_tar_uncorrected (probability of target behavior across all observations) 10. prob_tar_corrected (probability of target behavior over all observations minus reinforcers)}
+ \item{recounted_data_frame}{The dataframe with n*r reclassified observations. Contains the following variables}
 }
 \references{
 %% ~put references to the literature/web site here ~
