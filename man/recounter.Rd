@@ -28,8 +28,16 @@ recounter(x)
 \value{
 Returns a list containing
  \item{descriptive_statistics}{A list containing the following descriptive statistics}
- \item{desciptive_statistics_n_obs} {(number of total observations)}
- \item{2. n_tar (number of target behaviors) 3. n_reinf (number of reinforcers) 4. n_actor (number of unique actor ID), 5. n_cont (number of reinforcers occuring contiguous with target behavior) 6. reinf_index (the observation corresponding to each reinforcer) 7. contingency_index (the observation corresponding to each contiguous reinforcer) 8. na_index (observations corresponding to missing values) 9. prob_tar_uncorrected (probability of target behavior across all observations) 10. prob_tar_corrected (probability of target behavior over all observations minus reinforcers)}
+ \item{descriptive_statistics_n_obs} {(number of total observations)}
+ \item{descriptive_statistics_n_tar} {number of target behaviors}
+ \item{descriptive_statistics_n_reinf} {number of reinforcers}
+ \item{descriptive_statistics_n_actor} {number of unique actor ID}
+ \item{descriptive_statistics_n_cont} {number of reinforcers occuring contiguous with target behavior}
+ \item{descriptive_statistics_reinf_index} {the observation corresponding to each reinforcer}
+ \item{descriptive_statistics_contingency_index} {The observation corresponding to each contiguous reinforcer}
+ \item{descriptive_statistics_na_index} {The observations corresponding to missing values}
+  \item{descriptive_statistics_prob_tar_uncorrected} {The probability of target behavior across all observations}
+    \item{descriptive_statistics_prob_tar_prob_tar_corrected} {The probability of target behavior across all observations}
  \item{recounted_data_frame}{The dataframe with n*r reclassified observations. Contains the following variables}
 }
 \references{
