@@ -8,7 +8,7 @@ group_splitter
 A helper function converting a behaviorstream dataframe into a list split by a grouping factor (e.g., Video ID or Target ID). The resulting dataset is to be used by the recounter function
 }
 \usage{
-group_splitter(data,behaviorstream,"behavior","consequence",
+split_df <- group_splitter(data,behaviorstream,"behavior","consequence",
 group = "group", actor = "actor")
 }
 %- maybe also 'usage' for other objects documented here.
@@ -27,11 +27,7 @@ group = "group", actor = "actor")
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns a list of dataframes defined by grouping object
 }
 \references{
 %% ~put references to the literature/web site here ~
