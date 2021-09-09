@@ -63,14 +63,9 @@ Returns a two item list of lists, containing \bold{descriptive statistics} and \
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+recounter(elevator, BEH,"o","A")
+recounter(picture_stream, BEH,"o","A")
 
-## The function is currently defined as
-function (x)
-{
-  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
