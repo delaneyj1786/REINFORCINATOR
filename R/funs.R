@@ -484,6 +484,57 @@ group_split_recounter<- function(list, behaviorstream, behavior,consequence,acto
 }
 
 
+###################
+### Reformatting Functions ####
+# Combiner function
+combiner <- function(behaviorstream, code1,code2){
+
+  # Step 1 : find indices of code 1 and 2
+  # find all code 1
+  code_index_1 <- which(behaviorstream==code1)
+  # find all code 2
+  code_index_2 <- which(behaviorstream==code2)
+
+
+  # step 2 : concatenate into one list of codes
+  code_index_combined <- c(code_index_1,code_index_2)
+
+
+
+  # Step 3 : replace all values with 'RECODE'
+
+  for(i in seq_along(code_index_combined)){
+    behaviorstream[code_index_combined]<-code1
+
+  }
+
+  # print behaviorstream
+  behaviorstream
+}
+
+# Deleter function
+deleter <- function(behaviorstream, code1){
+
+  # Step 1 : find indices of code
+  # find all code 1
+  code_index_1 <- which(behaviorstream==code1)
+
+
+  # Step 2 : replace all values with 'RECODE'
+
+  for(i in seq_along(code_index_1)){
+    behaviorstream[code_index_1]<-NA
+
+  }
+
+  # Convert to data frame
+
+  (as_data_frame(behaviorstream) %>%
+      filter(!is.na(value)))[[1]] # filter out missing values
+  # returns vector
+}
+
+
 
 #################
 ## DATASETS #############
