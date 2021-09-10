@@ -476,7 +476,6 @@ group_splitter <- function(data, behaviorstream, behavior,consequence,
 }
 
 group_split_recounter<- function(list, behaviorstream, behavior,consequence,actor){
-  behaviorstream
   list %>% map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$recounted_data_frame) %>%
     map_dfr(~as.data.frame(.), .id = "GROUP")
 
