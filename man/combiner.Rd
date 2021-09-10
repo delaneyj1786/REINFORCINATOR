@@ -2,7 +2,7 @@
 \alias{combiner}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Combiner
 }
 \description{
 This function creates a new code using observations of two chosen behavior codes from the behavior stream
@@ -41,14 +41,11 @@ Returns \bold{behaviorstream} where indices corresponding to code 1 and code 2 a
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+> elevator$BEH
+ [1] "o" "x" "x" "x" "A" "o" "x" "x" "x" "A" "o" "o" "o" "x"
+> combiner(elevator$BEH,"o","x")
+ [1] "o" "o" "o" "o" "A" "o" "o" "o" "o" "A" "o" "o" "o" "o"
 
-## The function is currently defined as
-function (x)
-{
-  }
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
