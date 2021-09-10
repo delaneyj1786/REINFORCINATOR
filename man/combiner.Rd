@@ -13,7 +13,9 @@ combiner(x)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
+  \item{behaviorstream}{A character vector}
+  \item{code 1}{A character indicating the first code to be combined. The new code uses code 1.}
+  \item{code 2}{A character indiciating the second code to be combined}
 %%     ~~Describe \code{x} here~~
 }
 }
@@ -21,11 +23,7 @@ combiner(x)
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+returns \bold{behaviorstream} where indices corresponding to code 1 and code 2 are now replaced with code1
 }
 \references{
 %% ~put references to the literature/web site here ~
