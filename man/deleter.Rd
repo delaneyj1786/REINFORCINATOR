@@ -37,14 +37,11 @@ Returns \bold{behaviorstream} where indices corresponding to code 1 are now remo
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+> elevator$BEH
+ [1] "o" "x" "x" "x" "A" "o" "x" "x" "x" "A" "o" "o" "o" "x"
 
-## The function is currently defined as
-function (x)
-{
-  }
+> deleter(elevator$BEH,"o")
+[1] "x" "x" "x" "A" "x" "x" "x" "A" "x"
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

@@ -529,7 +529,7 @@ deleter <- function(behaviorstream, code1){
 
   # Convert to data frame
 
-  (as_data_frame(behaviorstream) %>%
+  (as_tibble(behaviorstream) %>%
       filter(!is.na(value)))[[1]] # filter out missing values
   # returns vector
 }
