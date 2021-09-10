@@ -8,23 +8,18 @@ Deleter
 This function deletes all observations of a chosen behavior code from the behavior stream
 }
 \usage{
-deleter(x)
+deleter(behaviorstream,code1)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
-}
+  \item{behaviorstream}{A character vector}
+  \item{code 1}{A character indicating the code to be deleted}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns \bold{behaviorstream} where indices corresponding to code 1 are now removed from the behaviorstream
 }
 \references{
 %% ~put references to the literature/web site here ~

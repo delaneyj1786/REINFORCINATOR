@@ -9,7 +9,7 @@ This function creates a new code using observations of two chosen behavior codes
 
 }
 \usage{
-combiner(x)
+combiner(behaviorstream,code1,code2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -23,7 +23,7 @@ combiner(x)
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-returns \bold{behaviorstream} where indices corresponding to code 1 and code 2 are now replaced with code1
+Returns \bold{behaviorstream} where indices corresponding to code 1 and code 2 are now replaced with code1
 }
 \references{
 %% ~put references to the literature/web site here ~
