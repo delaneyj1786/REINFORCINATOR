@@ -536,7 +536,113 @@ deleter <- function(behaviorstream, code1){
 
 
 
-#################
+#### Contingency Table Functions #####
+tables_recount_table<- function(recounted_df){
+  # will create three separate tables and output them to a list
+  # provide a recount (sum lapply)
+  # average
+  # recompute
+
+  # Sub-Series tables (Frequency)
+  sub_series_tables <- addmargins(table(recounted_df$recount_sequence,
+                                        recounted_df$recount_recode_stream,
+                                        recounted_df$sub_series))
+
+  # Sub-Series tables (Frequency) Sum with Margins (default last table)
+  sum_table <- sub_series_tables[,,"Sum"]
+
+
+  # Sub-Series tables without margins (Frequency)
+  sub_series_tables_without_margins <- table(recounted_df$recount_sequence,
+                                             recounted_df$recount_recode_stream,
+                                             recounted_df$sub_series)
+
+  # Sum Sub-Series tables without margins (Frequency)
+  sub_sum_no_margins_setup <- ftable(sub_series_tables_without_margins)
+  sub_sum_no_margins<-apply(sub_sum_no_margins_setup,1,sum)
+  #
+  sub_sum_no_margins_table<-matrix(sub_sum_no_margins,nrow=3,byrow = T)
+  #sub_sum_no_margins_table <- sub_sum_no_margins_table[c(1,2),]
+  rownames(sub_sum_no_margins_table) <- c("B","A", "R")
+  colnames(sub_sum_no_margins_table) <- c("NT","T")
+
+  # prop table without margins
+  # https://stackoverflow.com/questions/13151394/how-to-create-a-prop-table-for-a-three-dimension-table
+  sub_series_prop_tabs_without_margins <- prop.table(table(recounted_df$recount_sequence,
+                                                           recounted_df$recount_recode_stream,
+                                                           recounted_df$sub_series),c(3,1))
+
+  # Average Probabilities
+  # B_NT (BEFORE NOT TARGET)
+  B_NT<- apply(ftable(sub_series_prop_tabs_without_margins),1,mean)[1]
+
+  # B_T (BEFORE NOT TARGET)
+  B_T<- apply(ftable(sub_series_prop_tabs_without_margins),1,mean)[2]
+
+  # A_NT (BEFORE NOT TARGET)
+  A_NT<- apply(ftable(sub_series_prop_tabs_without_margins),1,mean)[3]
+
+  # A_T (BEFORE NOT TARGET)
+  A_T<- apply(ftable(sub_series_prop_tabs_without_margins),1,mean)[4]
+
+  #####
+  avg_prob_list <- c(B_NT,B_T,A_NT,A_T)
+  avg_diff <- A_T-B_T
+
+
+  # Average Table (no margins)
+  average_tab_no_margins<-sub_sum_no_margins_table / max((recounted_df)$sub_series)
+
+  # Average Table (with margins )
+  average_tab_with_margins<-sum_table/max((recounted_df)$sub_series) # use max reinforcer
+
+  # Average table row margins
+  average_row_margins<-average_tab_with_margins[c(1,2,3),3]
+
+  # Recompute : Multiple each proportion by totals
+  recompute_margins<-sub_series_prop_tabs_without_margins * average_row_margins
+
+  # Recompute Marginal Average
+  recompute_margins_setup <- ftable(recompute_margins)
+  recompute_margins_sum<-apply(recompute_margins_setup,1,sum)
+
+  recompute_margins_table<-matrix(recompute_margins_sum,nrow=3,byrow = T)
+  #sub_sum_no_margins_table <- sub_sum_no_margins_table[c(1,2),]
+  rownames(recompute_margins_table) <- c("B","A", "R")
+  colnames(recompute_margins_table) <- c("NT","T")
+
+  recompute_margins_table_avg = recompute_margins_table/max((recounted_df)$sub_series)
+
+  # recompute values
+  #recompute_values<-sub_series_prop_tabs_without_margins *  average_tab_no_margins
+  recomputed_sub_series_cell_wise<-list()
+  for(i in 1:max((recounted_df)$sub_series)){
+    recomputed_sub_series_cell_wise[i]<-list(sub_series_tables_without_margins[,,i]*average_tab_no_margins)
+  }
+
+
+
+  list(process_list = list(sub_series_with_margins = sub_series_tables,                                         # returns sub - series sep tab
+                           sum_sub_series_with_margins = sum_table,                                             # returns sum of sub-series w/margins
+                           sub_series_tables_without_margins = sub_series_tables_without_margins,               # returns
+                           sub_sum_no_margins = sub_sum_no_margins_table,
+                           sub_series_prop_tabs_without_margins = sub_series_prop_tabs_without_margins,
+                           average_tab_with_margins = average_tab_with_margins,
+                           row_average_totals = average_row_margins,
+                           recompute_margins = recompute_margins,
+                           average_tab_no_margins = average_tab_no_margins,
+                           recomputed_sub_series_cell_wise = recomputed_sub_series_cell_wise,
+                           recompute_margins_sum = recompute_margins_sum,
+                           recompute_margins_table =recompute_margins_table,
+                           recompute_margins_table_avg = recompute_margins_table_avg),
+       output_list = list(avg_prob = avg_prob_list,
+                          avg_diff = avg_diff,
+                          sum_recount_table = sum_table,
+                          average_table = average_tab_with_margins,
+                          recompute_frequencies =  addmargins(recompute_margins_table_avg))
+  )
+}
+
 ## DATASETS #############
 
 elevator<-tidyr::tibble(
