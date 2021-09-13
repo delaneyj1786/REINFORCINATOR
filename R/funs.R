@@ -1,3 +1,6 @@
+# install_github("wrengels/HWxtest", subdir="pkg")
+# https://kbroman.org/pkg_primer/pages/github.html
+
 recounter<-function(data,behaviorstream,
                        behavior,consequence,
                        actor = NULL,
