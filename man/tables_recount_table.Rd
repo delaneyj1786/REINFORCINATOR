@@ -5,16 +5,14 @@
 Table Recount
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Provides frequency based statistics and probabilities for recounted_data_frame
 }
 \usage{
 tables_recount_table(recounted_data_frame)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
-}
+  \item{recounted_data_frame}{An object from the recounter function}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
