@@ -46,6 +46,14 @@ recounter(reinforcement,BEH,"o","A")$descriptive_statistics
 The recounted data frame is a dataset which can be used in regression models and for contingency table functions (i.e., contingency_table_builders):
 
 ```{r recounted data frame}
-
-recounter(reinforcement,BEH,"o","A")$recounted_data_frame
+recounted_reinforcement<-recounter(reinforcement,BEH,"o","A")$recounted_data_frame
 ```
+
+```{r recounted data frame tabyl}
+recounted_reinforcement %>% tabyl(recount_recode_stream)
+```
+
+### Contingency table Builders
+
+
+
