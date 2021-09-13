@@ -16,6 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r load package, echo = FALSE}
 require(ReenforcinateR)
+require(tidyverse)
 ```
 
 ## Data
