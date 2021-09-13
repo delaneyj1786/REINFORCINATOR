@@ -643,6 +643,26 @@ tables_recount_table<- function(recounted_df){
   )
 }
 
+
+
+### Statistical Tests
+
+# Likert Test
+allison_liker_z <- function(pta,ptt,pa,n,k){
+  #pta
+  #pt
+  #pa
+  #n
+  #k
+  z_num = pta - ptt
+  z_denom = (ptt*((1-ptt)*(1-pa)))/((n-k)*pa)
+  Z_1 = z_num/sqrt(z_denom)
+  Z_1
+}
+
+
+
+
 ## DATASETS #############
 
 elevator<-tidyr::tibble(
@@ -720,3 +740,6 @@ reinforcement<-tibble(
           "A", #1
           "o","o","o")
 )
+
+
+
