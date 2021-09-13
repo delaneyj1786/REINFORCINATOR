@@ -55,5 +55,13 @@ recounted_reinforcement %>% tabyl(recount_recode_stream)
 
 ### Contingency table Builders
 
+The function tables_recount_table produces two lists, a process list for computing various statistics (e.g., row wise probabilities, F tables without margins, etc.) and an output list which provides contingency tables for the frequency and probabilities. 
 
 
+```{r contingency table builder reinforcement process list}
+tables_recount_table(recounted_reinforcement)$process_list
+```
+
+```{r contingency table builder reinforcement output list}
+tables_recount_table(recounted_reinforcement)$output_list
+```
