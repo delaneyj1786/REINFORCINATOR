@@ -27,7 +27,16 @@ Produces two lists. \bold{process_list} and \bold{output_list}. \bold{process_li
   \item{sub_series_without_margins}{A list containing a contingency table for each sub-series and the sum across both (margins excluded)}
  \item{sum_sub_series_with_margins}{A table containing the sum across all sub series tables (margins excluded)}
    \item{sub_series_prop_tabs_without_margins}{A list containing a proportion (row wise by row margins) for each sub-series (margins excluded)}
- \item{average_tab_with_margins}{A table containing the average cell frequency across sub-series )}
+ \item{average_tab_with_margins}{A table containing the average cell frequency across sub-series}
+ \item{row_average_totals}{A vector of the row margins from average table (used for recomputing frequencies)}
+ \item{recompute_margins}{The product of the prop_tabs_without_margins and row_average_totals}
+ \item{average_tab_no_margins}{A table containing the average cell frequency across sub-series (With margins omitted)}
+ \item{recomputed_sub_series_cell_wise}{?}
+ \item{recompute_margins_sum}{?}
+ \item{recompute_margins_table}{?}
+ \item{recompute_margins_table_avg}{?}
+
+
 
 %% ...
 }
