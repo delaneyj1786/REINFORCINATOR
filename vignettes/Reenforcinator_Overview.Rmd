@@ -9,6 +9,8 @@ vignette: >
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+#https://kbroman.org/pkg_primer/pages/vignettes.html#:~:text=To%20include%20an%20R%20Markdown%20document%20as%20a,vignette%20will%20be%20in%20the%20inst%2Fdoc%20folder.%20
 ```
 
 ## R Markdown
