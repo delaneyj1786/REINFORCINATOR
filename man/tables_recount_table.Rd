@@ -20,7 +20,7 @@ tables_recount_table(recounted_data_frame)
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
+Produces two lists. \bold{process_list} and \bold{output_list}. \bold{process_list}
 %%  If it is a LIST, use
 %%  \item{comp1 }{Description of 'comp1'}
 %%  \item{comp2 }{Description of 'comp2'}
