@@ -8,7 +8,7 @@ Table Recount
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-tables_recount_table(x)
+tables_recount_table(recounted_data_frame)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
