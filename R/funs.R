@@ -5,8 +5,8 @@ recounter<-function(data,behaviorstream,
                        contingency = NULL){ # adding actor = FALSE ... for now ...
 
   # reserve quoting for column names (probably symb for characters)
-  behaviorstream <- enquo(behaviorstream)
-  actor <- enquo(actor)
+  behaviorstream <- dplyr::enquo(behaviorstream)
+  actor <- dplyr::enquo(actor)
   #missing_data <- enquo(missing_data)
 
   data <-as.data.frame(data)
