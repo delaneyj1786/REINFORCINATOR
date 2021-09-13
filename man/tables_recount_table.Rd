@@ -35,9 +35,12 @@ Produces two lists. \bold{process_list} and \bold{output_list}. \bold{process_li
  \item{recompute_margins_sum}{?}
  \item{recompute_margins_table}{?}
  \item{recompute_margins_table_avg}{?}
-
-
-
+ \bold{Output List}
+ \item{avg_prob}{average probability across all sub-series (check what table)}
+ \item{avg_diff}{average difference between before and after (check)}
+ \item{sum_recount_table}{The sum of the recounted frequencies across sub-series}
+ \item{average_table}{The average value across the sub-series (check)}
+ \item{recompute frequencies}{check}
 %% ...
 }
 \references{
