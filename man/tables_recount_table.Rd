@@ -21,9 +21,14 @@ tables_recount_table(recounted_data_frame)
 }
 \value{
 Produces two lists. \bold{process_list} and \bold{output_list}. \bold{process_list}
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
+
+ \item{sub_series_with_margins}{A list containing a contingency table for each sub-series and the sum across both}
+ \item{sum_sub_series_with_margins}{A table containing the sum across all sub series tables}
+  \item{sub_series_without_margins}{A list containing a contingency table for each sub-series and the sum across both (margins excluded)}
+ \item{sum_sub_series_with_margins}{A table containing the sum across all sub series tables (margins excluded)}
+   \item{sub_series_prop_tabs_without_margins}{A list containing a proportion (row wise by row margins) for each sub-series (margins excluded)}
+ \item{average_tab_with_margins}{A table containing the average cell frequency across sub-series )}
+
 %% ...
 }
 \references{
