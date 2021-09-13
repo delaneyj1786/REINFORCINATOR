@@ -15,11 +15,11 @@ recounter<-function(data,behaviorstream,
   data <-as.data.frame(data)
 
   ## Descriptive stats from cols ##
-  n_obs <- data %>% summarize(n_obs = length(!!behaviorstream))
-  n_tar <- data %>% summarize(n_targets = length(which(!!behaviorstream == behavior)))
-  n_reinf <- data %>% summarize(n_reinforcers = length(which(!!behaviorstream == consequence)))
-  n_actor <- data %>% summarize(n_unique_actors = length(unique(!!actor)))
-  n_cont <- data %>% summarize(n_cont = length(which(!!behaviorstream == consequence & lag(!!behaviorstream == behavior))))
+  n_obs <- data %>% dplyr::summarize(n_obs = length(!!behaviorstream))
+  n_tar <- data %>% dplyr::summarize(n_targets = length(which(!!behaviorstream == behavior)))
+  n_reinf <- data %>% dplyr::summarize(n_reinforcers = length(which(!!behaviorstream == consequence)))
+  n_actor <- data %>% dplyr::summarize(n_unique_actors = length(unique(!!actor)))
+  n_cont <- data %>% dplyr::summarize(n_cont = length(which(!!behaviorstream == consequence & lag(!!behaviorstream == behavior))))
   #  list(n_obs,n_tar[[1]])
 
   ## Probabilities ##
@@ -30,15 +30,15 @@ recounter<-function(data,behaviorstream,
 
   ## For Calculations ##
   # Overall Reinforcers
-  reinf_index<- data %>% summarize(reinf_index = which(!!behaviorstream==consequence))
+  reinf_index<- data %>% dplyr::summarize(reinf_index = which(!!behaviorstream==consequence))
   # contingencies
-  contingency_index <-data %>% summarize(contingency_index = which(!!behaviorstream == consequence & lag(!!behaviorstream == behavior)))
+  contingency_index <-data %>% dplyr::summarize(contingency_index = which(!!behaviorstream == consequence & lag(!!behaviorstream == behavior)))
 
 
   #reinf_index$reinf_index # returns the vector
 
   # replace NA values
-  na_index <- data %>% summarize(na_index = which(is.na(!!behaviorstream)))
+  na_index <- data %>% dplyr::summarize(na_index = which(is.na(!!behaviorstream)))
 
   # create a list item for descriptives
   descriptives <- list(n_obs = n_obs,
@@ -84,11 +84,11 @@ recounter<-function(data,behaviorstream,
       # behaviorstream replicated m times
       # recount_stream = rep(data[,behaviorstream][[1]], n_cont)
 
-      recount_stream = data %>% summarize(recount_stream = rep(!!behaviorstream,n_reinf))
+      recount_stream = data %>% dplyr::summarize(recount_stream = rep(!!behaviorstream,n_reinf))
 
 
       #   # 1.1 recount actor stream
-      recount_actor = data %>% summarize(rep(!!actor, n_reinf))
+      recount_actor = data %>% dplyr::summarize(rep(!!actor, n_reinf))
 
 
       #     # 2. sub-series vector
@@ -204,11 +204,11 @@ recounter<-function(data,behaviorstream,
       # behaviorstream replicated m times
       # recount_stream = rep(data[,behaviorstream][[1]], n_cont)
 
-      recount_stream = data %>% summarize(recount_stream = rep(!!behaviorstream,n_cont))
+      recount_stream = data %>% dplyr::summarize(recount_stream = rep(!!behaviorstream,n_cont))
 
 
       #   # 1.1 recount actor stream
-      recount_actor = data %>% summarize(rep(!!actor, n_cont))
+      recount_actor = data %>% dplyr::summarize(rep(!!actor, n_cont))
 
 
       #     # 2. sub-series vector
