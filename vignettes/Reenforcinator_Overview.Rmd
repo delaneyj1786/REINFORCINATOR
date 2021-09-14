@@ -71,8 +71,39 @@ tables_recount_table(recounted_reinforcement)$output_list
 The reinforcinator package comes with a function for applying the recounter for each level of a grouping variable (such as participant ID or video ID). 
 
 ### Data 
-I illustrate the group splitting on the reinforcement data by adding a 
-```{r group splitter}
+I illustrate the group splitting on the reinforcement data by adding a second person to the reinforcement data 
+```{r reinforcement data 2}
 
+reinforcement2<-tidyr::tibble(
+  VIDELT = rep(4,11),
+  TAR = rep("JAN",11),
+  BEH = c("o","x","x", #4
+          "A", #4
+          "o","o","x", #3
+          "A", #1
+          "o","o","o")
+)
+
+reinforcement3 <- rbind(reinforcement,reinforcement2)
+
+head(reinforcement3)
+tail(reinforcement3)
+
+```
+
+
+### Overall Descriptives
+The overall statistics are as follows (without accounting for the reinforcement process)
+```{r descriptives for reinforcement 3}
+require(janitor)
+reinforcement3 %>% tabyl(TAR,BEH)
+
+```
+
+
+To adress whether there is a difference before or after reinforcement we must recount the data and then compare proportions
+```{r reinforcement }
+reinforcement_2person<-recounter(reinforcement, BEH, "o","A")$recounted_data_frame
+tables_recount_table(reinforcement_2person)$output_list
 ```
 
