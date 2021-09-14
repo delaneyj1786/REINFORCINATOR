@@ -66,8 +66,8 @@ Returns a two item list of lists, containing \bold{descriptive statistics} and \
 # descriptive statistics
 recounted_elevator_descriptives<-recounter(elevator, BEH,"o","A")$descriptive_statistics
 
-# recounted data
-recounted_elevator_recounted_df<-recounter(elevator, BEH,"o","A")$descriptive_statistics
+# recounted data frame
+recounted_elevator_recounted_df<-recounter(elevator, BEH,"o","A")$recounted_data_frame
 
 
 }
