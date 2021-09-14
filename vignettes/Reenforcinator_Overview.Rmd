@@ -103,7 +103,36 @@ reinforcement3 %>% tabyl(TAR,BEH)
 
 To adress whether there is a difference before or after reinforcement we must recount the data and then compare proportions
 ```{r reinforcement }
-reinforcement_2person<-recounter(reinforcement, BEH, "o","A")$recounted_data_frame
+reinforcement_2person<-recounter(reinforcement3, BEH, "o","A")$recounted_data_frame
 tables_recount_table(reinforcement_2person)$output_list
 ```
+
+
+### Group splitting
+
+First we split the dataframe 
+```{r splitting by groups}
+
+group_split_reinforcement_2person<-group_splitter(reinforcement3, BEH,"o","A", group = "TAR", actor = "TAR")
+
+group_split_reinforcement_2person
+
+```
+
+
+Now we use this for the recounted dataframe split by each actor. This produces a single recounted data frame. 
+
+```{r recounter by groups}
+
+recounted_group_split<-group_split_recounter(group_split_reinforcement_2person, "BEH","o","A", actor = "TAR")
+
+recounted_group_split %>% tabyl(recount_recode_stream,GROUP)
+
+```
+
+
+#### Applying Descriptives (contingency table) on recounted split data frame
+
+Now we can apply the descriptives separately for each group: 
+
 
