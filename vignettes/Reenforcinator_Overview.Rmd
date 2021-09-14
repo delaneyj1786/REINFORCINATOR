@@ -133,6 +133,6 @@ recounted_group_split %>% tabyl(recount_recode_stream,GROUP)
 
 #### Applying Descriptives (contingency table) on recounted split data frame
 
-Now we can apply the descriptives separately for each group: 
+Now we can apply the descriptives on the whole dataset (which accounts for group separation when sorting sequences). 
 
 
