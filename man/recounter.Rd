@@ -63,8 +63,12 @@ Returns a two item list of lists, containing \bold{descriptive statistics} and \
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-recounter(elevator, BEH,"o","A")
-recounter(picture_stream, BEH,"o","A")
+# descriptive statistics
+recounted_elevator_descriptives<-recounter(elevator, BEH,"o","A")$descriptive_statistics
+
+# recounted data
+recounted_elevator_recounted_df<-recounter(elevator, BEH,"o","A")$descriptive_statistics
+
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
