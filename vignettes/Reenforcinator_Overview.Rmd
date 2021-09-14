@@ -65,3 +65,14 @@ tables_recount_table(recounted_reinforcement)$process_list
 ```{r contingency table builder reinforcement output list}
 tables_recount_table(recounted_reinforcement)$output_list
 ```
+
+# Group-wise Detection
+
+The reinforcinator package comes with a function for applying the recounter for each level of a grouping variable (such as participant ID or video ID). 
+
+### Data 
+I illustrate the group splitting on the reinforcement data by adding a 
+```{r group splitter}
+
+```
+

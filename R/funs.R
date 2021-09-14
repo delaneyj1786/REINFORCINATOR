@@ -669,7 +669,7 @@ allison_liker_z <- function(pta,ptt,pa,n,k){
 ## DATASETS #############
 
 elevator<-tidyr::tibble(
-  VIDELT = rep(2,14),
+  VIDELT = c(rep(1,7),rep(2,7)),
   TAR = rep("S",14),
   BEH = c("o","x",
           "x","x",
@@ -682,7 +682,7 @@ elevator<-tidyr::tibble(
 
 # Note this is all contingent
 picture_stream<-tidyr::tibble(
-  VIDELT = rep(2,25),
+  VIDELT = rep(1,25),
   TAR = rep("S",25),
   BEH = c("x","x","x","o", #4
           "A", #1
@@ -713,7 +713,7 @@ two_person_picture<-tidyr::tibble(
 
 
 noeffect<-tidyr::tibble(
-  VIDELT = rep(2,11),
+  VIDELT = rep(1,11),
   TAR = rep("ABE",11),
   BEH = c("o","x","x", #4
           "A", #1
@@ -735,7 +735,7 @@ punishment<-tibble(
 
 
 reinforcement<-tibble(
-  VIDELT = rep(2,11),
+  VIDELT = rep(3,11),
   TAR = rep("ABE",11),
   BEH = c("o","x","x", #4
           "A", #1
