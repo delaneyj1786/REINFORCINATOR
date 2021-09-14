@@ -723,7 +723,7 @@ noeffect<-tidyr::tibble(
 )
 
 
-punishment<-tibble(
+punishment<-tidyr::tibble(
   VIDELT = rep(2,11),
   TAR = rep("ABE",11),
   BEH = c("o","o","o", #4
@@ -734,7 +734,7 @@ punishment<-tibble(
 )
 
 
-reinforcement<-tibble(
+reinforcement<-tidyr::tibble(
   VIDELT = rep(3,11),
   TAR = rep("ABE",11),
   BEH = c("o","x","x", #4
