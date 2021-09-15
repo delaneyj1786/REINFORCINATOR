@@ -57,14 +57,15 @@ Produces two lists. \bold{process_list} and \bold{output_list}. \bold{process_li
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+# Obtain recounted data frame
+# recounted data frame
+recounted_elevator_recounted_df<-recounter(elevator, BEH,"o","A")$recounted_data_frame
 
-## The function is currently defined as
-function (x)
-{
-  }
+For process list:
+tables_recount_table(elevator_recounted)$process_list
+
+For output list:
+tables_recount_table(elevator_recounted)$output_list
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

@@ -153,8 +153,8 @@ tables_recount_table(recounted_group_split)$output_list
 # Thomas Data
 ```{r thomas data set up}
 tkdata<-tidyr::tibble(
-  VIDELT = rep(5,11),
-  TAR = rep("TK",11),
+  VIDELT = rep(5,14),
+  TAR = rep("TK",14),
   BEH = c("o","x","x", "x", #4
           "A", #5
           "x","x","x","x", #3
@@ -162,7 +162,12 @@ tkdata<-tidyr::tibble(
           "o","o","o","x")
 )
 
+tk_data_recounted<-recounter(tkdata, BEH, "o","A")$recounted_data_frame
+recounter(tkdata, BEH, "o","A")$descriptive_statistics
 
+# still off from his old example
+tables_recount_table(tk_data_recounted)$output_list
+tables_recount_table(tk_data_recounted)$process_list
 ```
 
 
