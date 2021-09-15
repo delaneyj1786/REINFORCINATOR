@@ -2,7 +2,7 @@
 title: "Reenforcinator Overview"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Reenforcinator Overivew}
+  %\VignetteIndexEntry{Reenforcinator Overview}
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 ---
@@ -12,6 +12,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 #https://kbroman.org/pkg_primer/pages/vignettes.html#:~:text=To%20include%20an%20R%20Markdown%20document%20as%20a,vignette%20will%20be%20in%20the%20inst%2Fdoc%20folder.%20
 #devtools::build_vignettes() 
+
+# For the header meta data  
+
+# https://rdrr.io/cran/summarytools/f/vignettes/rmarkdown.Rmd
 ```
 
 ```{r load package, echo = FALSE, message = FALSE}
@@ -135,6 +139,8 @@ recounted_group_split %>% tabyl(recount_recode_stream,GROUP)
 
 Now we can apply the descriptives on the whole dataset (which accounts for group separation when sorting sequences). 
 
+
+The difference here is that instead of 4 reinforcers, this is now averaging 2 sets of 2 reinforcers
 ```{r recounted two person descriptives}
 recounted_group_split
 tables_recount_table(recounted_group_split)$output_list
