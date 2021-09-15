@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #devtools::build_vignettes() 
 ```
 
-```{r load package, echo = FALSE}
+```{r load package, echo = FALSE, message = FALSE}
 require(ReenforcinateR)
 require(tidyverse)
 ```
@@ -135,4 +135,11 @@ recounted_group_split %>% tabyl(recount_recode_stream,GROUP)
 
 Now we can apply the descriptives on the whole dataset (which accounts for group separation when sorting sequences). 
 
+```{r recounted two person descriptives}
+recounted_group_split
+tables_recount_table(recounted_group_split)$output_list
+```
 
+
+### Average Probabilities
+The computation should be an average for each sub-series probability
