@@ -1,6 +1,9 @@
 ---
 title: "Reenforcinator Overview"
-output: rmarkdown::html_vignette
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
 vignette: >
   %\VignetteIndexEntry{Reenforcinator Overview}
   %\VignetteEngine{knitr::rmarkdown}
@@ -144,6 +147,22 @@ The difference here is that instead of 4 reinforcers, this is now averaging 2 se
 ```{r recounted two person descriptives}
 recounted_group_split
 tables_recount_table(recounted_group_split)$output_list
+```
+
+
+# Thomas Data
+```{r thomas data set up}
+tkdata<-tidyr::tibble(
+  VIDELT = rep(5,11),
+  TAR = rep("TK",11),
+  BEH = c("o","x","x", "x", #4
+          "A", #5
+          "x","x","x","x", #3
+          "A", #1
+          "o","o","o","x")
+)
+
+
 ```
 
 
