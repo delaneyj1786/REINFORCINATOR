@@ -629,7 +629,7 @@ tables_recount_table<- function(recounted_df){
                            sum_sub_series_with_margins = sum_table,                                             # returns sum of sub-series w/margins
                            sub_series_tables_without_margins = sub_series_tables_without_margins,               # returns
                            sub_sum_no_margins = sub_sum_no_margins_table,
-                           sub_series_prop_tabs_without_margins = sub_series_prop_tabs_without_margins,
+                           sub_series_prop_tabs_without_margins = sub_series_prop_tabs_without_margins,         # used for average probabilities with ftable
                            average_tab_with_margins = average_tab_with_margins,
                            row_average_totals = average_row_margins,
                            recompute_margins = recompute_margins,

@@ -186,6 +186,20 @@ tables_recount_table(reinforcement_ex_rcdf)$output_list
 punishment_ex_rcdf<-recounter(punishment,BEH,"o","A")$recounted_data_frame
 tables_recount_table(punishment_ex_rcdf)$output_list
 
+
+# Using Process list$sub_series_prop_tabs_without_margins
+ # # Average Probabilities
+ #  # B_NT (BEFORE NOT TARGET)
+ #  B_NT<- apply(ftable(sub_series_prop_tabs_without_margins),1,mean)[1]
+ # 
+ #  # B_T (BEFORE NOT TARGET)
+ #  B_T<- apply(ftable(sub_series_prop_tabs_without_margins),1,mean)[2]
+ # 
+ #  # A_NT (BEFORE NOT TARGET)
+ #  A_NT<- apply(ftable(sub_series_prop_tabs_without_margins),1,mean)[3]
+ # 
+ #  # A_T (BEFORE NOT TARGET)
+ #  A_T<- apply(ftable(sub_series_prop_tabs_without_margins),1,mean)[4]
 ```
 
 ```{r 2 person example}
@@ -193,6 +207,9 @@ test_4<-rbind(reinforcement,punishment)
 reinforcement_ex_4 <- recounter(test_4,BEH,"o","A")$recounted_data_frame
 
 
-```
+
+
+
 
 ```
+
