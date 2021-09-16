@@ -173,3 +173,13 @@ tables_recount_table(tk_data_recounted)$process_list
 
 ### Average Probabilities
 The computation should be an average for each sub-series probability
+
+
+
+# Test data for TK
+```{r reinforcement example }
+reinforcement_ex_rcdf<-recounter(reinforcement,BEH,"o","A")$recounted_data_frame
+
+tables_recount_table(reinforcement_ex_rcdf)
+
+```
