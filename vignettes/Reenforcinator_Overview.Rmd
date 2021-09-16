@@ -179,7 +179,20 @@ The computation should be an average for each sub-series probability
 # Test data for TK
 ```{r reinforcement example }
 reinforcement_ex_rcdf<-recounter(reinforcement,BEH,"o","A")$recounted_data_frame
+tables_recount_table(reinforcement_ex_rcdf)$output_list
+```
 
-tables_recount_table(reinforcement_ex_rcdf)
+```{r punishment example}
+punishment_ex_rcdf<-recounter(punishment,BEH,"o","A")$recounted_data_frame
+tables_recount_table(punishment_ex_rcdf)$output_list
+
+```
+
+```{r 2 person example}
+test_4<-rbind(reinforcement,punishment)
+reinforcement_ex_4 <- recounter(test_4,BEH,"o","A")$recounted_data_frame
+
+
+```
 
 ```
