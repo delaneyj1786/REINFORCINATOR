@@ -2,10 +2,16 @@
 \alias{elevator}
 \docType{data}
 \title{
-elevator data
+Elevator data
 }
 \description{
 An example dataset to illustrate how the arrival of an elevator may affect subsequent operation of this elevator.
+
+Contains 2 reinforcers.
+
+Overall probability of 'o' = .357 (uncorrected)
+Overall probability of 'o' = .417 (corrected)
+
 }
 \usage{data("elevator")}
 \format{
@@ -27,6 +33,45 @@ An example dataset to illustrate how the arrival of an elevator may affect subse
 }
 \examples{
 data(elevator)
-## maybe str(elevator) ; plot(elevator) ...
+
+## Recounted Single Data frame
+recounted_elevator<-recounter(elevator,BEH,"o","A","TAR")$recounted_data_frame
+
+## Recounted Contingency Table Stats
+recount_elevator_tables<-tables_recount_table(recounted_elevator)
+
+$output_list$avg_prob
+     B_NT       B_T      A_NT       A_T
+0.7638889 0.2361111 0.4027778 0.5972222
+
+## Split by VIDLET
+elevator_split<-group_splitter(elevator, BEH, "o","x","A", group = "VIDELT")
+elevator_split
+$`1`
+# A tibble: 7 x 3
+  VIDELT TAR   BEH
+   <dbl> <chr> <chr>
+1      1 S     o
+2      1 S     x
+3      1 S     x
+
+$`2`
+# A tibble: 7 x 3
+  VIDELT TAR   BEH
+   <dbl> <chr> <chr>
+1      2 S     x
+2      2 S     x
+3      2 S     A
+
+## Recounted for each VIDELT
+elevator_split_recount<-group_split_recounter(elevator_split, behaviorstream = "BEH","o","A", actor = "TAR" )
+
+## Recounted Split Contingency Table Stats
+tables_recount_table(elevator_split_recount)
+
+$output_list$avg_prob
+     B_NT       B_T      A_NT       A_T
+0.8333333 0.1666667 0.3333333 0.6666667
+
 }
 \keyword{datasets}
