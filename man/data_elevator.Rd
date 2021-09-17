@@ -7,11 +7,6 @@ Elevator data
 \description{
 An example dataset to illustrate how the arrival of an elevator may affect subsequent operation of this elevator.
 
-Contains 2 reinforcers.
-
-Overall probability of 'o' = .357 (uncorrected)
-Overall probability of 'o' = .417 (corrected)
-
 }
 \usage{data("elevator")}
 \format{
@@ -33,6 +28,14 @@ Overall probability of 'o' = .417 (corrected)
 }
 \examples{
 data(elevator)
+
+
+## Overall Probabilities (using "o" as Target and "A" as reinforcer)
+$descriptive_statistics$prob_tar_uncorrected
+[1] 0.3571429
+
+$descriptive_statistics$prob_tar_corrected
+[1] 0.4166667
 
 ## Recounted Single Data frame
 recounted_elevator<-recounter(elevator,BEH,"o","A","TAR")$recounted_data_frame
