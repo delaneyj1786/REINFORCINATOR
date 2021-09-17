@@ -174,5 +174,13 @@ tables_recount_table(tk_data_recounted)$process_list
 ### Average Probabilities
 The computation should be an average for each sub-series probability
 
+# Cleaning Functions
+The Reinforcinator comes with a deleter and combiner function
 
+
+### Combiner 
+
+
+
+### Deleter
 
