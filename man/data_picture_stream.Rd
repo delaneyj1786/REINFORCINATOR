@@ -28,6 +28,13 @@ An example dataset to illustrate how reinforcement detection may appear in a one
 \examples{
 data(picture_stream)
 
+# Overall Probabilities
+$descriptive_statistics$prob_tar_uncorrected
+[1] 0.56
+
+$descriptive_statistics$prob_tar_corrected
+[1] 0.6363636
+
 ## Recounted Single Data Frame
 recounted_picture<-recounter(picture_stream,BEH,"o","A","TAR")$recounted_data_frame
 
