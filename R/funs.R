@@ -1,6 +1,7 @@
 # install_github("wrengels/HWxtest", subdir="pkg")
 # https://kbroman.org/pkg_primer/pages/github.html
 
+# need to add partner in
 recounter<-function(data,behaviorstream,
                        behavior,consequence,
                        actor = NULL,
@@ -489,30 +490,15 @@ group_split_recounter<- function(list, behaviorstream, behavior,consequence,acto
 
 ###################
 ### Reformatting Functions ####
+
+## Need to make these tidyverse compatible
+
+
 # Combiner function
-combiner <- function(behaviorstream, code1,code2){
-
-  # Step 1 : find indices of code 1 and 2
-  # find all code 1
-  code_index_1 <- which(behaviorstream==code1)
-  # find all code 2
-  code_index_2 <- which(behaviorstream==code2)
-
-
-  # step 2 : concatenate into one list of codes
-  code_index_combined <- c(code_index_1,code_index_2)
-
-
-
-  # Step 3 : replace all values with 'RECODE'
-
-  for(i in seq_along(code_index_combined)){
-    behaviorstream[code_index_combined]<-code1
-
-  }
-
-  # print behaviorstream
-  behaviorstream
+combiner<- function(data, behaviorstream, code1, code2){
+  behaviorstream <- dplyr::enquo(behaviorstream)
+  data <- as.data.frame(data)
+  data %>% mutate(Combined = ifelse(!!behaviorstream == code1 | !!behaviorstream == code2, paste(code1,code2,sep="_"),!!behaviorstream))
 }
 
 # Deleter function
