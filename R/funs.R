@@ -505,7 +505,7 @@ combiner<- function(data, behaviorstream, code1, code2){
 deleter<- function(data,behaviorstream,code1){
 behaviorstream <- dplyr::enquo(behaviorstream)
 data <- as.data.frame(data)
-data %>% filter(!!behaviorstream != code1)
+dplyr::filter(data, !!behaviorstream != code1)
 }
 
 # Partner function recode
