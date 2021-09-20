@@ -8,13 +8,15 @@
 The partner_recoder creates a new variable (newcol) which places a consequence_partner code for observations where a desired consequence comes from a desired partner.
 }
 \usage{
-partner_recoder(x)
+partner_recoder(data,behaviorstream, type, consequence, partner)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
-}
+  \item{data}{A dataframe or tibble}
+  \item{behaviorstream}{A column (character vector) representing the observation stream. Contains actor behaviors and partner consequences}
+  \item{type}{A column (character vector) representing the social partners}
+  \item{consequence}{A character string indicating the environmental consequence acting as a reinforcer}
+  \item{partner}{A character string indicating the code for desired partner (from the type column)}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
