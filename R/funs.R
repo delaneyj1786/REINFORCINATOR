@@ -502,26 +502,13 @@ combiner<- function(data, behaviorstream, code1, code2){
 }
 
 # Deleter function
-deleter <- function(behaviorstream, code1){
-
-  # Step 1 : find indices of code
-  # find all code 1
-  code_index_1 <- which(behaviorstream==code1)
-
-
-  # Step 2 : replace all values with 'RECODE'
-
-  for(i in seq_along(code_index_1)){
-    behaviorstream[code_index_1]<-NA
-
-  }
-
-  # Convert to data frame
-
-  (as_tibble(behaviorstream) %>%
-      filter(!is.na(value)))[[1]] # filter out missing values
-  # returns vector
+deleter<- function(data,behaviorstream,code1){
+behaviorstream <- dplyr::enquo(behaviorstream)
+data <- as.data.frame(data)
+data %>% filter(!!behaviorstream != code1)
 }
+
+
 
 
 
