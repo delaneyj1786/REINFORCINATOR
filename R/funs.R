@@ -508,7 +508,13 @@ data <- as.data.frame(data)
 data %>% filter(!!behaviorstream != code1)
 }
 
-# Partner
+# Partner function recode
+partner_recoder <- function(data,behaviorstream, type, consequence, partner){
+  behaviorstream <- dplyr::enquo(behaviorstream)
+  type <- dplyr::enquo(type)
+  data <- as.data.frame(data)
+  data %>% dplyr::mutate(newcol = ifelse(!!behaviorstream == consequence & !!type == partner, paste(partner,consequence,sep="_"),!!behaviorstream))
+}
 
 
 
