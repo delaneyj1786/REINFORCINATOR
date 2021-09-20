@@ -498,7 +498,7 @@ group_split_recounter<- function(list, behaviorstream, behavior,consequence,acto
 combiner<- function(data, behaviorstream, code1, code2){
   behaviorstream <- dplyr::enquo(behaviorstream)
   data <- as.data.frame(data)
-  data %>% mutate(Combined = ifelse(!!behaviorstream == code1 | !!behaviorstream == code2, paste(code1,code2,sep="_"),!!behaviorstream))
+  dplyr::mutate(data,Combined = ifelse(!!behaviorstream == code1 | !!behaviorstream == code2, paste(code1,code2,sep="_"),!!behaviorstream))
 }
 
 # Deleter function
