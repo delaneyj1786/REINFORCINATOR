@@ -519,6 +519,37 @@ partner_recoder <- function(data,behaviorstream, type, consequence, partner){
 
 
 
+group_filter <- function(dat, GROUP1, GROUP2, DV){
+  #  https://stackoverflow.com/questions/58846126/using-rlang-quasiquotation-with-dplyr-join-functions
+  data <- tibble(dat)
+  GROUP1 <- dplyr::enquo(GROUP1)
+  GROUP2 <- dplyr::enquo(GROUP2)
+  DV <- dplyr::enquo(DV)
+
+  #  data <- data.frame(data)
+  # dat
+  # FRQ OF DV by group 2
+  FRQ_G2_DV <- dat %>%
+    dplyr::group_by(!!GROUP1, !!GROUP2, !!DV) %>%
+    dplyr::summarize(count = n()) %>%
+    ungroup()
+  # FRQ_G2_DV
+  # Number of cases of group2
+  FRQ_F2 <- dat%>%
+    dplyr::group_by(!!GROUP1,!!GROUP2) %>%
+    dplyr::summarize(n = n()) %>%
+    ungroup()
+  #FRQ_F2
+  # Summary by video
+  # vid_sum<-dplyr::left_join(FRQ_G2_DV,FRQ_F2, by = c(!!GROUP1,!!GROUP2) )
+  vid_sum<-dplyr::left_join(FRQ_G2_DV,FRQ_F2)
+  vid_sum<-vid_sum %>% dplyr::mutate(prop = count/n)
+  vid_sum
+}
+
+
+
+
 #### Contingency Table Functions #####
 tables_recount_table<- function(recounted_df){
   # will create three separate tables and output them to a list
@@ -728,3 +759,5 @@ reinforcement<-tidyr::tibble(
 ##############################
 ### TK TEST DATA ####
 
+####
+# Shiny app notes / interface
