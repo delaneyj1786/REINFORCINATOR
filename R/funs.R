@@ -521,7 +521,7 @@ partner_recoder <- function(data,behaviorstream, type, consequence, partner){
 
 group_filter <- function(dat, GROUP1, GROUP2, DV){
   #  https://stackoverflow.com/questions/58846126/using-rlang-quasiquotation-with-dplyr-join-functions
-  data <- tibble(dat)
+  data <- data.frame(dat)
   GROUP1 <- dplyr::enquo(GROUP1)
   GROUP2 <- dplyr::enquo(GROUP2)
   DV <- dplyr::enquo(DV)
