@@ -52,12 +52,4 @@ Function sources Recounter5 (a non-tidyverse friendly legacy version of the reco
 test<-group_splitter(two_person_picture,BEH, "x","A",group = "VIDELT", actor = "TAR")
 group_split_recounter(test,behaviorstream = "BEH","x","A",actor = "TAR")
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory (show via RShowDoc("KEYWORDS")):
-% \keyword{ ~kwd1 }
-% \keyword{ ~kwd2 }
-% Use only one keyword per line.
-% For non-standard keywords, use \concept instead of \keyword:
-% \concept{ ~cpt1 }
-% \concept{ ~cpt2 }
-% Use only one concept per line.
+
