@@ -43,6 +43,7 @@ Returns a grouped data frame containing the 1) primary grouping variable, 2) the
 \note{
 This function is meant to be used to identify observation segments which meet a certain theshold as follows.
 
+#1. Identify the segments meeting threshold
 group_filter(two_person_picture,VIDELT, TAR,BEH) %>% filter(prop >.39)
   VIDELT TAR   BEH   count     n  prop
    <dbl> <chr> <chr> <int> <int> <dbl>
@@ -50,6 +51,12 @@ group_filter(two_person_picture,VIDELT, TAR,BEH) %>% filter(prop >.39)
 2      1 ABE   x         6    15 0.4
 3      2 JAN   o         7    15 0.467
 4      2 JAN   x         6    15 0.4
+
+#2. Filter dataset to said segments
+two_person_picture_filtered <- two_person_picture %>% filter(VIDELT == 1 & VIDELT == 2)
+
+#3. Apply recounter on filtered data
+recounter(two_person_picture_filtered, BEH, "o","A")$recounted_data_frame
 
 
 }
