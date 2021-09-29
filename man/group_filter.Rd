@@ -2,10 +2,11 @@
 \alias{group_filter}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+Group Filter
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+A helper function which provides counts and proportions of all levels of a categorical DV according to two nesting variables
+
 }
 \usage{
 group_filter(data, GROUP1, GROUP2, DV)
