@@ -41,10 +41,19 @@ Returns a grouped data frame containing the 1) primary grouping variable, 2) the
 %%  ~~who you are~~
 }
 \note{
-%%  ~~further notes~~
+This function is meant to be used to identify observation segments which meet a certain theshold as follows.
+
+group_filter(two_person_picture,VIDELT, TAR,BEH) %>% filter(prop >.39)
+  VIDELT TAR   BEH   count     n  prop
+   <dbl> <chr> <chr> <int> <int> <dbl>
+1      1 ABE   o         7    15 0.467
+2      1 ABE   x         6    15 0.4
+3      2 JAN   o         7    15 0.467
+4      2 JAN   x         6    15 0.4
+
+
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
 %% ~~objects to See Also as \code{\link{help}}, ~~~
