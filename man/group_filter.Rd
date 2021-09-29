@@ -5,7 +5,9 @@
 Group Filter
 }
 \description{
-A helper function which provides counts and proportions of all levels of a categorical DV according to two nesting variables
+A helper function which provides counts and proportions of all levels of a categorical DV according to two nesting variables.
+
+This is to be used in conjunction with filter to remove possibly problematic groups (e.g., those with low base rates of target reinfroced behaviors)
 
 }
 \usage{
