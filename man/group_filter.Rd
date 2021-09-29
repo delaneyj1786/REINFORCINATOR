@@ -28,19 +28,6 @@ A column containing the behavioral dependent variable
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-Returns a grouped data frame containing the 1) primary grouping variable, 2) the secondary grouping variable,
-3) the DV, 4) count of DV (per secondary within primary grouping variable), 5) n (number of total observations within both groupings) 5) proportion of each level of DV per primary / secondary variable combination
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-%%  ~~who you are~~
-}
-\note{
 This function is meant to be used to identify observation segments which meet a certain theshold as follows.
 
 #1. Identify the segments meeting threshold
@@ -58,6 +45,19 @@ two_person_picture_filtered <- two_person_picture %>% filter(VIDELT == 1 & VIDEL
 #3. Apply recounter on filtered data
 recounter(two_person_picture_filtered, BEH, "o","A")$recounted_data_frame
 
+}
+\value{
+Returns a grouped data frame containing the 1) primary grouping variable, 2) the secondary grouping variable,
+3) the DV, 4) count of DV (per secondary within primary grouping variable), 5) n (number of total observations within both groupings) 5) proportion of each level of DV per primary / secondary variable combination
+}
+\references{
+%% ~put references to the literature/web site here ~
+}
+\author{
+%%  ~~who you are~~
+}
+\note{
+Future versions will produce a list output to be piped to list arguments for filter
 
 }
 
