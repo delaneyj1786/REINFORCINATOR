@@ -313,16 +313,16 @@ Recounter5<-function(data,behaviorstream,
                      missing_data = NULL){ # adding actor = FALSE ... for now ...
 
   data <-as.data.frame(data)
-  # only if there are reinforcers ...
-  if(length(which(data[,behaviorstream]==consequence))> 0){
-
-    if(which(data[,behaviorstream]==consequence)[length(which(data[,behaviorstream] == consequence))] == length(data[,behaviorstream][[1]])){
-      data[,behaviorstream][[1]][length(data[,behaviorstream][[1]])] <- "ELSE"
-    }
-  }else{
-    data[,behaviorstream][[1]][length(data[,behaviorstream][[1]])] <- data[,behaviorstream][[1]][length(data[,behaviorstream][[1]])]
-  }
-
+  # # only if there are reinforcers ...
+  # if(length(which(data[,behaviorstream]==consequence))> 0){
+  #
+  #   if(which(data[,behaviorstream]==consequence)[length(which(data[,behaviorstream] == consequence))] == length(data[,behaviorstream][[1]])){
+  #     data[,behaviorstream][[1]][length(data[,behaviorstream][[1]])] <- "ELSE"
+  #   }
+  # }else{
+  #   data[,behaviorstream][[1]][length(data[,behaviorstream][[1]])] <- data[,behaviorstream][[1]][length(data[,behaviorstream][[1]])]
+  # }
+  #
 
 
   ## ** Descriptive Check ** #
@@ -477,6 +477,19 @@ group_splitter <- function(data, behaviorstream, behavior,consequence,
   # test
   #group_wise_test(two_person_picture,BEH, "x","A",group = "VIDELT", actor = "TAR")
 
+}
+
+group_splitter2 <- function(data, behaviorstream, behavior,consequence,
+                    group1,group2,
+                    actor = NULL, missing_data = NULL,
+                    contingency = NULL){
+  # this just splits the data frame
+  group1 <- as.factor(group1)
+  group2 <- as.factor(group2)
+  split(data, f = (c(data[,group1],data[,group2])))
+
+  # test
+  #group_wise_test(two_person_picture,BEH, "x","A",group = "VIDELT", actor = "TAR")
 }
 
 group_split_recounter<- function(list, behaviorstream, behavior,consequence,actor){
