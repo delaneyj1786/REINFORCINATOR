@@ -489,7 +489,7 @@ group_splitter2 <- function(data, behaviorstream, behavior,consequence,
   split(data, f = (c(data[,group1],data[,group2])))
 
   # test
-  #group_wise_test(two_person_picture,BEH, "x","A",group = "VIDELT", actor = "TAR")
+#  group_splitter2(two_person_picture,behaviorstream = "BEH", behavior = "o", consequence = "A", group1 = "VIDELT", group2 = "TAR")
 }
 
 group_split_recounter<- function(list, behaviorstream, behavior,consequence,actor){
