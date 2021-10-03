@@ -329,8 +329,13 @@ Recounter5 <- function(data,behaviorstream,
   ## ** Descriptive Check ** #
   # n_obs <- length(data[,behaviorstream][[1]])     # n observations      length(data[,behaviorstream])
   n_obs <- length(data[,behaviorstream])     # n observations      length(data[,behaviorstream])
+
+  # if(is.na(x)) {x=FALSE} else {if(x) {x}}
+  # https://www.programmingr.com/r-error-messages/r-error-missing-value-where-true-false-needed/
   if(data[n_obs,behaviorstream]==consequence){
-    data[n_obs,behaviorstream] <- "EOO"}
+    #   data[n_obs,behaviorstream] <- "EOO"}
+    data[n_obs,behaviorstream] = TRUE} else{data[n_obs,behaviorstream]==consequence}
+
 
   n_tar <- length(which(data[,behaviorstream]== behavior))             # n behaviors
   n_reinf<- length(which(data[,behaviorstream] == consequence))        # n reinforces
@@ -466,7 +471,6 @@ Recounter5 <- function(data,behaviorstream,
   # print list
   return(output_list)
 }
-
 
 
 group_splitter <- function(data, behaviorstream, behavior,consequence,
