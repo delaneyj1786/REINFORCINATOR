@@ -307,10 +307,10 @@ recounter<-function(data,behaviorstream,
     return(output_list)
   }}
 
-Recounter5<-function(data,behaviorstream,
-                     behavior,consequence,
-                     actor = NULL,
-                     missing_data = NULL){ # adding actor = FALSE ... for now ...
+Recounter5 <- function(data,behaviorstream,
+                       behavior,consequence,
+                       actor = NULL,
+                       missing_data = NULL){ # adding actor = FALSE ... for now ...
 
   data <-as.data.frame(data)
   # # only if there are reinforcers ...
@@ -325,9 +325,12 @@ Recounter5<-function(data,behaviorstream,
   #
 
 
+
   ## ** Descriptive Check ** #
   # n_obs <- length(data[,behaviorstream][[1]])     # n observations      length(data[,behaviorstream])
   n_obs <- length(data[,behaviorstream])     # n observations      length(data[,behaviorstream])
+  if(data[n_obs,behaviorstream]==consequence){
+    data[n_obs,behaviorstream] <- "EOO"}
 
   n_tar <- length(which(data[,behaviorstream]== behavior))             # n behaviors
   n_reinf<- length(which(data[,behaviorstream] == consequence))        # n reinforces
@@ -463,7 +466,6 @@ Recounter5<-function(data,behaviorstream,
   # print list
   return(output_list)
 }
-
 
 
 
