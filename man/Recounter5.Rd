@@ -5,7 +5,7 @@
 recounter5 for use in group_split_recounter
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+A legacy version of recounter which uses non-tidyverse functions. Does not use quasi-quotation.
 }
 \usage{
 Recounter5(x)
@@ -17,7 +17,7 @@ Recounter5(x)
 }
 }
 \details{
-%%  ~~ If necessary, more details than the description above ~~
+Only to be used on clean data-frames (e.g., all NA's removed)
 }
 \value{
 %%  ~Describe the value returned
