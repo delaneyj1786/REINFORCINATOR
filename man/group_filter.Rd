@@ -24,7 +24,7 @@ A column / vector describing the highest order grouping factor (e.g., person )
 A column / vector describing the second order grouping factor (e.g., segment)
 }
   \item{DV}{
-A column containing the behavioral dependent variable
+A column containing the behavioral dependent variable.
 }
 }
 \details{
