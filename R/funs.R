@@ -521,14 +521,15 @@ group_split_recounter<- function(list, behaviorstream, behavior,consequence,acto
 # Combiner function
 combiner<- function(data, behaviorstream, code1, code2){
   behaviorstream <- dplyr::enquo(behaviorstream)
-  data <- as.data.frame(data)
+  data <- tibble(data)
   dplyr::mutate(data,Combined = ifelse(!!behaviorstream == code1 | !!behaviorstream == code2, paste(code1,code2,sep="_"),!!behaviorstream))
-}
+
+  }
 
 # Deleter function
 deleter<- function(data,behaviorstream,code1){
 behaviorstream <- dplyr::enquo(behaviorstream)
-data <- as.data.frame(data)
+data <- as_tibble(data)
 dplyr::filter(data, !!behaviorstream != code1)
 }
 
@@ -536,7 +537,7 @@ dplyr::filter(data, !!behaviorstream != code1)
 partner_recoder <- function(data,behaviorstream, type, consequence, partner){
   behaviorstream <- dplyr::enquo(behaviorstream)
   type <- dplyr::enquo(type)
-  data <- as.data.frame(data)
+  data <- tibble::as_tibble(data)
   data %>% dplyr::mutate(newcol = ifelse(!!behaviorstream == consequence & !!type == partner, paste(partner,consequence,sep="_"),!!behaviorstream))
 }
 
