@@ -24,7 +24,7 @@ combiner(data, behaviorstream,code1,code2)
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-Returns \bold{behaviorstream} where indices corresponding to code 1 and code 2 are now replaced with code1
+Returns a tibble where indices in \bold{behaviorstream} corresponding to code 1 and code 2 are now replaced with code1
 }
 \references{
 %% ~put references to the literature/web site here ~

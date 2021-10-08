@@ -529,7 +529,7 @@ combiner<- function(data, behaviorstream, code1, code2){
 # Deleter function
 deleter<- function(data,behaviorstream,code1){
 behaviorstream <- dplyr::enquo(behaviorstream)
-data <- as_tibble(data)
+data <- tibble::as_tibble(data)
 dplyr::filter(data, !!behaviorstream != code1)
 }
 
