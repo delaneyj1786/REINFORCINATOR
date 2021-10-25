@@ -472,6 +472,137 @@ Recounter5 <- function(data,behaviorstream,
   return(output_list)
 }
 
+################ SHINY VERSION RECOUNTER
+# Note - this is the same function but WITHOUT the data frame
+Recounter2 <-function(behaviorstream, behavior,consequence, actor = NULL, missing_data = NULL){ # adding actor = FALSE ... for now ...
+  #  if(!is.null(missing_data)){
+  #    behaviorstream <- behaviorstream %>% filter(is.na(behavior))
+  #  }
+  ## ** Descriptive Check ** #
+  n_obs <- length(behaviorstream)                         # n observations
+  n_tar <- length(which(behaviorstream == behavior))      # n behaviors
+  n_reinf<- length(which(behaviorstream == consequence))  # n reinforcers
+  #
+  reinf_index<-which(behaviorstream==consequence)
+  # replace NA values
+  na_index <- which(is.na(behaviorstream))
+
+  # create a list item for descriptives
+  descriptives <- list(n_obs = n_obs,
+                       n_tar = n_tar,
+                       n_reinf = n_reinf,
+                       reinf_index =  reinf_index,
+                       na_index =  na_index)
+
+
+  ## ** Initialize K Matrix **
+  # remove missing values
+  # behaviorstream <- ifelse(is.na(behaviorstream),0,behaviorstream)
+  # check for missing contingenceis
+  if (n_reinf==0 | n_tar==0){
+    stop("there are no observations of these contingencies")
+  } else {
+
+    ## 1. create the single recounted stream
+    # behaviorstream replicated m times
+    recount_stream = rep(behaviorstream, n_reinf)
+
+    # 1.1 recount actor stream
+    recount_actor = rep(actor, n_reinf)
+
+    # 2. sub-series vector
+    ## spans the recounted_stream
+    ## indicates which 'copy' is the stream - one copy per reinforcer
+    sub_series <- c()
+    for(i in 1:n_reinf){
+      sub_series=c(sub_series,(rep(i,n_obs)))
+    }
+
+    # 3. Recount index stream
+    ##
+    recount_stream_index= rep(1:n_obs,n_reinf)
+
+
+
+
+
+    # 4. recounted recode stream
+    # recodes the recounted stream as T or NT
+    # across all events (i.e. all reinforcers are non targets)
+    # these have to be picked up by the conditional recount_sequence
+    recount_recode_stream = vector("numeric",length(recount_stream))
+
+    # 6. sequence vector
+    recount_sequence= rep("",length(recount_stream))
+
+    # 7. bind all to a dataframe
+
+    recount_df<-data.frame(recount_stream,
+                           sub_series,
+                           recount_stream_index,
+                           recount_recode_stream,
+                           recount_sequence,
+                           stringsAsFactors = FALSE)
+
+    # 5. Recode Recount Stream
+    ## This adds a 2 for each reinforcer ....
+    ### note should adjust to create a new column without the recode
+    for(i in seq_along(reinf_index)){
+      recount_df[recount_df[,"sub_series"]==i,4][reinf_index[i]]<-2
+    }
+
+
+    # 7. Fill Sequence Vector
+
+    for(i in seq_along(reinf_index)){
+      recount_df[recount_df[,"sub_series"]==i,5][1:reinf_index[i]-1]<-"B"
+      recount_df[recount_df[,"sub_series"]==i,5][(reinf_index[i]+1):n_obs]<-"A"
+      recount_df[recount_df[,"sub_series"]==i,5][reinf_index[i]]<-"R"
+    }
+
+
+    # 8. Recode the recount stream
+    recount_df$recount_recode_stream<-ifelse(recount_df$recount_stream==behavior,"T","NT")
+
+    #9. factor the variable
+    recount_df<- recount_df %>%
+      mutate(recount_sequence = factor(recount_sequence))
+
+    #10 relevel
+    recount_df<- recount_df %>%
+      mutate(recount_sequence = fct_relevel(recount_sequence, "B","A","R"))
+
+    #11 recount numeric to recode
+    recount_df<- recount_df %>%
+      mutate(recount_recode_numeric = ifelse(recount_recode_stream == "T",1,0))
+
+
+    #12 add in recounted actor
+    if(!is.null(actor)){
+      recount_df <- cbind(recount_df,recount_actor)
+    }
+    # 13. Add a regression column for the sequence (see BODR_71419_3)
+    recount_df<- recount_df %>%
+      mutate(regression_recount_sequence = ifelse(recount_sequence == "R",NA,recount_sequence))
+    # 13.b make a factor
+    recount_df<- recount_df %>%
+      mutate(regression_recount_sequence = factor(regression_recount_sequence,
+                                                  labels = c("B","A")))
+
+    # 13.c relevel
+    #     recount_df<- recount_df %>%
+    #        mutate(regression_recount_sequence =  fct_relevel(regression_recount_sequence,"B","A"))
+
+
+
+  }
+  # Full List
+  output_list<-list(descriptive_statistics = descriptives, recounted_data_frame = recount_df)
+
+  # print list
+  return(output_list)
+}
+
 
 group_splitter <- function(data, behaviorstream, behavior,consequence,
                            group,
