@@ -643,6 +643,14 @@ group_split_recounter<- function(list, behaviorstream, behavior,consequence,acto
 }
 
 
+group_split_recounter2 <- function(list, behaviorstream, behavior,consequence,actor){
+  list %>% map(~Recounter2(.x,behaviorstream,behavior,consequence,actor)$recounted_data_frame) %>%
+    map_dfr(~as.data.frame(.), .id = "GROUP")
+
+  # ## TESTING
+  # group_split_recounter(gs_test,behaviorstream = "BEH","x","A",actor = "TAR")
+}
+
 ###################
 ### Reformatting Functions ####
 
