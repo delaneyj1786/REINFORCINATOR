@@ -871,13 +871,14 @@ picture_stream<-tidyr::tibble(
 #
 
 two_person_picture<-tidyr::tibble(
-  VIDELT = c(rep(1,15),rep(2,15)),
+  VIDELT = c(rep(1,7),rep(2,8), rep(3,7), rep(4,8)),
   TAR = c(rep("ABE",15),rep("JAN",15)),
   BEH = c("x","x","x","o", #4
           "A", #1
-          "o","x","o", #3
+          "o","x", ### end 1
+          "o", #3
           "A", #1
-          "o","o","x","x","o","o", #6
+          "o","o","x","x","o","o", #6 # end two
           "x","x","x","o", #4
           "A",
           "o","x","o",
