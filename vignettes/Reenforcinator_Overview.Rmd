@@ -197,13 +197,13 @@ split_df_1 <- group_splitter(two_person_picture,behaviorstream = BEH,
 
 split_df_2 <- group_splitter2(two_person_picture,behaviorstream = BEH, 
                              behavior = "o", consequence = "A", 
-                             group1 = "TAR", group2 = "VIDELT")
+                             group1 = "TAR", group2 = "VIDELT", filt = TRUE)
 
 group_split_recounter(split_df_1,"BEH","o","A","TAR")
 
 ## having issues here ... 
 #Error in if (data[n_obs, behaviorstream] == consequence) { : argument is of length zero
-group_split_recounter2(split_df_2,"BEH","o","A","TAR")
+group_split_recounter(split_df_2,"BEH","o","A","TAR")
 
 
 
