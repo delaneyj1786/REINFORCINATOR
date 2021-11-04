@@ -205,7 +205,7 @@ group_split_recounter(split_df_1,"BEH","o","A","TAR")
 #Error in if (data[n_obs, behaviorstream] == consequence) { : argument is of length zero
 group_split_recounter(split_df_2,"BEH","o","A","TAR")
 
-
+# took out gsr 2
 
 
 ```
