@@ -2,6 +2,7 @@
 # https://kbroman.org/pkg_primer/pages/github.html
 
 # need to add partner in
+#
 recounter<-function(data,behaviorstream,
                        behavior,consequence,
                        actor = NULL,
