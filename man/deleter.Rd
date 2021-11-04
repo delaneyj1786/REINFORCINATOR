@@ -20,7 +20,7 @@ deleter(data, behaviorstream,code1)
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-Returns a tibble where indices in \bold{behaviorstream} corresponding to code 1 are now removed from the behaviorstream. The behaviorstream is
+Returns a tibble where indices in \bold{behaviorstream} corresponding to code 1 are now removed from the behaviorstream.
 }
 \references{
 %% ~put references to the literature/web site here ~
