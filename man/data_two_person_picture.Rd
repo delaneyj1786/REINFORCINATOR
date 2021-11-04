@@ -7,7 +7,11 @@ Two Person Picture
 \description{
 An example dataset to illustrate how reinforcement detection may appear in a two person observation stream. This is based on the single person example in James DeLaney's masters thesis 'Detecting Reinforcement Patterns in the Stream of Observations'.
 
-This data intended to illustrate the split apply strategy (see group_splitter and group_split_recounter)
+There are two observation 'episodes' per person (two people). This is intended to illustrate the recounting within double nested structures.
+
+This data intended to illustrate the split apply strategy (see group_splitter and group_split_recounter).
+
+
 }
 \usage{data("two_person_picture")}
 \format{
