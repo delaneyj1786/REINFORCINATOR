@@ -180,10 +180,16 @@ The Reinforcinator comes with a deleter and combiner function
 
 ### Combiner 
 
+```{r combiner demo}
+combiner(elevator,BEH,"o","x")
 
+```
 
 ### Deleter
+```{r deleter demo}
+deleter(elevator,BEH,"o")
 
+```
 
 ### Testing
 
