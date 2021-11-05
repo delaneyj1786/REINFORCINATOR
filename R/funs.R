@@ -876,7 +876,18 @@ two_person_picture<-tidyr::tibble(
           "A",
           "o","x","o",
           "A",
-          "o","o","x","x","o","o")
+          "o","o","x","x","o","o"),
+  PART = c("SELF","SELF","SELF","SELF",
+           "FRIEND",
+           "SELF","SELF",
+           "SELF",
+           "STRANGER",
+           "SELF","SELF","SELF","SELF","SELF","SELF",
+           "SELF","SELF","SELF","SELF",
+           "STRANGER",
+           "SELF","SELF","SELF",
+           "FRIEND",
+           "SELF","SELF","SELF","SELF","SELF","SELF")
 )
 
 
@@ -929,15 +940,15 @@ reinforcement<-tidyr::tibble(
 # 2) Partner code
 
 
-elevator2<-tidyr::tibble(
-  VIDELT = c(rep(1,7),rep(2,7)),
-  TAR = rep("S",14),
-  BEH = c("o","x",
-          "x","x",
-          "A",
-          "o","x","x","x",
-          "A",
-          "o","o","o","x"),
-  PART = c(rep("SELF",7),rep("OTHER",7))
-)
+# elevator2<-tidyr::tibble(
+#   VIDELT = c(rep(1,7),rep(2,7)),
+#   TAR = rep("S",14),
+#   BEH = c("o","x",
+#           "x","x",
+#           "A",
+#           "o","x","x","x",
+#           "A",
+#           "o","o","o","x"),
+#   PART = c(rep("SELF",7),rep("OTHER",7))
+# )
 
