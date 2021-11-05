@@ -23,6 +23,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r load package, echo = FALSE, message = FALSE}
 require(ReenforcinateR)
+#install_github("delaneyj1786/REINFORCINATOR")
+
 require(tidyverse)
 ```
 
