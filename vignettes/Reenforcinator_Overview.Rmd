@@ -193,6 +193,12 @@ deleter(elevator,BEH,"o")
 
 ```
 
+### Partner 
+```{r partner demo}
+partner_recoder(two_person_picture,BEH,PART,"A","FRIEND")
+
+```
+
 ### Testing
 
 ```{r test compare two and 1 group}
