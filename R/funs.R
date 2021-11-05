@@ -937,6 +937,7 @@ elevator2<-tidyr::tibble(
           "A",
           "o","x","x","x",
           "A",
-          "o","o","o","x")
+          "o","o","o","x"),
+  PART = c(rep("SELF",7),rep("OTHER",7))
 )
 
