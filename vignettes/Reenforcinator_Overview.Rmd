@@ -223,3 +223,41 @@ group_split_recounter(split_df_2,"BEH","o","A","TAR")
 
 
 ```
+
+
+
+
+## Plotting the series
+```{r plotting }
+test_df<-recounter(two_person_picture,BEH,"o","A")$recounted_data_frame
+
+test_df <- test_df %>% group_by(sub_series) %>%
+  mutate(sub_series_sum = cumsum(recount_recode_numeric),   # uses the total sum ... not running 
+         sub_series_total = max(recount_stream_index),
+         sub_series_cum_run_prob = sub_series_sum / sub_series_total, # total sum as denom
+         sub_series_run_prob = sub_series_sum / recount_stream_index) %>% ungroup()
+
+## now group by sequence for averagve B and A
+
+
+sum_one<- test_df %>% group_by(sub_series, recount_sequence) %>%
+  summarize(sub_series_mean = mean(sub_series_run_prob)) %>% ungroup()
+
+merge_plot <- left_join(test_df,sum_one, by = "sub_series")
+
+# having issues with the hline 
+
+## getting closer .. 
+ggplot(merge_plot,aes(x = recount_stream_index, y = sub_series_run_prob, color = recount_sequence.x))+
+  geom_point() +
+ geom_hline(aes(yintercept=(sub_series_mean), color = as_factor(sub_series)), alpha=0.3) + facet_wrap(~sub_series)
+  # geom_point(aes(x = mean(recount_stream_index),y = sub_series_mean, size = .4, color = recount_sequence.x))
+
+ # geom_hline(yintercept = sub_series_mean) +
+
+
+
+
+
+
+```
