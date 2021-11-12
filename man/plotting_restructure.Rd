@@ -63,8 +63,18 @@ ggplot(filter(sum_one, recount_sequence != "R"),aes(x = sub_series, y = sub_seri
   ylab("Average Sequence Probabilities")
 
 
-## Join both graphs
-merge_plot <- left_join(test_df_rc,sum_one, by = "sub_series")
+## To plot the overall series with the overall Sequence Probabilities juxtaposed on the series
+# Find the overall average by sequence
+overall_average <- sum_one %>% group_by(recount_sequence) %>% summarize(mean_sub_mean = mean(sub_series_mean)) %>% ungroup() %>% filter(recount_sequence != "R")
+
+# Merge summary with the original dataset so we can add the means to the plot
+average_df<-left_join(test_df_rc, overall_average, by = "recount_sequence")
+
+
+ggplot(average_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence))) + geom_point() + geom_line(aes(y = mean_sub_mean)) +
+  ggtitle("Overall Sequence Average") +
+  xlab("Observation Sequence") +
+  ylab("Running Probabilities of Target")
 
 
 ## The function is currently defined as
