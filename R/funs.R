@@ -925,15 +925,18 @@ reinforcement<-tidyr::tibble(
 )
 
 
-##############################
-### TK TEST DATA ####
-
-####
-# Shiny app notes / interface
-
-
-########################
-
 
 ################################
 # Plotting Functions
+plotting_restructure <- function(recounted_df){
+
+  recounted_df  <- recounted_df %>% dplyr::group_by(sub_series) %>%
+    mutate(sub_series_sum = cumsum(recount_recode_numeric),   # uses the total sum ... not running
+           sub_series_total = max(recount_stream_index),
+           sub_series_cum_run_prob = sub_series_sum / sub_series_total, # total sum as denom
+           sub_series_run_prob = sub_series_sum / recount_stream_index) %>% ungroup()
+
+}
+
+
+
