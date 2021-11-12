@@ -936,6 +936,8 @@ plotting_restructure <- function(recounted_df){
            sub_series_cum_run_prob = sub_series_sum / sub_series_total, # total sum as denom
            sub_series_run_prob = sub_series_sum / recount_stream_index) %>% ungroup()
 
+  recounted_df
+
 }
 
 
