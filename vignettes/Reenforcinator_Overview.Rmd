@@ -240,11 +240,14 @@ test_df <- test_df %>% group_by(sub_series) %>%
 # Plot shows the main probabilities (which don't change)
 # But also shows the shifting of sequence (the colors)
 # Thus the average value changes for each sub-series (e.g., Before [red] takes over)
-ggplot(test_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence), group = sub_series)) + geom_point() +facet_grid(~sub_series)
+ggplot(test_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence), group = sub_series)) + geom_point() +facet_grid(~sub_series) + 
+  ggtitle("Running Sequence Probabilities By Sub-Series")+
+  xlab("Observation Sequence") + 
+  ylab("Running Probability")
 
 ```
 
-```{r average by series}
+```{r average Sequence Prob by series}
 # Now - we want the plot to show the average value before and after for each sub-series
 # If 4 sub-series, then 4 before probabilities and 4 after probabilities 
 # These will be the average by sequence, for each sub-series 
@@ -254,12 +257,15 @@ sum_one<- test_df %>% group_by(sub_series, recount_sequence) %>%
 
 merge_plot <- left_join(test_df,sum_one, by = "sub_series")
 
-ggplot(filter(sum_one, recount_sequence != "R"),aes(x = sub_series, y = sub_series_mean, color = (recount_sequence))) + geom_point() + geom_line()
+ggplot(filter(sum_one, recount_sequence != "R"),aes(x = sub_series, y = sub_series_mean, color = (recount_sequence))) + geom_point() + geom_line() + 
+  ggtitle("Average Sub-Series Probabilities By Sequence") + 
+  xlab("Sub-Series") + 
+  ylab("Average Sequence Probabilities")
 
 
 ```
 
-```{r second group average }
+```{r Overall Sequence Average }
 
 ## Now we want the original series ... plotted (no coloring)
 # then we want to add in the AVERAGE for each sequence (across the sub-series)
@@ -269,9 +275,10 @@ overall_average <- sum_one %>% group_by(recount_sequence) %>% summarize(mean_sub
 average_df<-left_join(test_df, overall_average, by = "recount_sequence")
 
 
-
-
-ggplot(average_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence))) + geom_point() + geom_line(aes(y = mean_sub_mean))
+ggplot(average_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence))) + geom_point() + geom_line(aes(y = mean_sub_mean)) + 
+  ggtitle("Overall Sequence Average") + 
+  xlab("Observation Sequence") + 
+  ylab("Running Probabilities of Target")
 
 
 
