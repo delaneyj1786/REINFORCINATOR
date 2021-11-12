@@ -5,26 +5,26 @@
 plotting_restructure
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
-}
+Helper function to add graphing / plotting variables to the recounted data frame}
 \usage{
 plotting_restructure(x)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
-%%     ~~Describe \code{x} here~~
+A recounted data frame
 }
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+Returns a data frame with 4 variables:
+\item{sub_series_sum}{description}
+\item{sub_series_total}{description}
+\item{sub_series_cum_run_prob}{description}
+\item{sub_series_run_prob}{description}
+
 }
 \references{
 %% ~put references to the literature/web site here ~
