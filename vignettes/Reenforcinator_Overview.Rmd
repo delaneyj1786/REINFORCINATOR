@@ -260,7 +260,15 @@ ggplot(filter(sum_one, recount_sequence != "R"),aes(x = sub_series, y = sub_seri
 ```
 
 ```{r second group average }
-# now average across the sub_series...
+
+## Now we want the original series ... plotted (no coloring)
+# then we want to add in the AVERAGE for each sequence (across the sub-series)
+
+overall_average <- sum_one %>% group_by(recount_sequence) %>% summarize(mean(sub_series_mean)) %>% ungroup()
+
+average_df<-left_join(test_df, overall_average, by = "recount_sequence")
+
+
 
 sub_series_average<-merge_plot %>% group_by(recount_sequence.x) %>%
   summarize(mean_sub_series = mean(sub_series_mean)) %>% ungroup()
