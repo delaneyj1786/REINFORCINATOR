@@ -237,6 +237,14 @@ test_df <- test_df %>% group_by(sub_series) %>%
          sub_series_cum_run_prob = sub_series_sum / sub_series_total, # total sum as denom
          sub_series_run_prob = sub_series_sum / recount_stream_index) %>% ungroup()
 
+# Plot shows the main probabilities (which don't change)
+# But also shows the shifting of sequence (the colors)
+# Thus the average value changes for each sub-series (e.g., Before [red] takes over)
+ggplot(test_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence), group = sub_series)) + geom_point() +facet_grid(~sub_series)
+
+```
+
+```{r group plots}
 ## now group by sequence for average B and A
 
 sum_one<- test_df %>% group_by(sub_series, recount_sequence) %>%
