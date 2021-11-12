@@ -244,14 +244,22 @@ ggplot(test_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (r
 
 ```
 
-```{r group plots}
-## now group by sequence for average B and A
+```{r average by series}
+# Now - we want the plot to show the average value before and after for each sub-series
+# If 4 sub-series, then 4 before probabilities and 4 after probabilities 
+# These will be the average by sequence, for each sub-series 
 
 sum_one<- test_df %>% group_by(sub_series, recount_sequence) %>%
   summarize(sub_series_mean = mean(sub_series_run_prob)) %>% ungroup()
 
 merge_plot <- left_join(test_df,sum_one, by = "sub_series")
 
+ggplot(filter(sum_one, recount_sequence != "R"),aes(x = sub_series, y = sub_series_mean, color = (recount_sequence))) + geom_point() + geom_line()
+
+
+```
+
+```{r second group average }
 # now average across the sub_series...
 
 sub_series_average<-merge_plot %>% group_by(recount_sequence.x) %>%
