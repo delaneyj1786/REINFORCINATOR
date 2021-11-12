@@ -933,22 +933,7 @@ reinforcement<-tidyr::tibble(
 
 
 ########################
-## Elevator 2
-
-# Should demo
-# 1) group nesting (two groups)
-# 2) Partner code
 
 
-# elevator2<-tidyr::tibble(
-#   VIDELT = c(rep(1,7),rep(2,7)),
-#   TAR = rep("S",14),
-#   BEH = c("o","x",
-#           "x","x",
-#           "A",
-#           "o","x","x","x",
-#           "A",
-#           "o","o","o","x"),
-#   PART = c(rep("SELF",7),rep("OTHER",7))
-# )
-
+################################
+# Plotting Functions
