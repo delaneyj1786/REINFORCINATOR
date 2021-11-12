@@ -264,16 +264,25 @@ ggplot(filter(sum_one, recount_sequence != "R"),aes(x = sub_series, y = sub_seri
 ## Now we want the original series ... plotted (no coloring)
 # then we want to add in the AVERAGE for each sequence (across the sub-series)
 
-overall_average <- sum_one %>% group_by(recount_sequence) %>% summarize(mean(sub_series_mean)) %>% ungroup()
+overall_average <- sum_one %>% group_by(recount_sequence) %>% summarize(mean_sub_mean = mean(sub_series_mean)) %>% ungroup() %>% filter(recount_sequence != "R")
 
 average_df<-left_join(test_df, overall_average, by = "recount_sequence")
 
 
 
-sub_series_average<-merge_plot %>% group_by(recount_sequence.x) %>%
-  summarize(mean_sub_series = mean(sub_series_mean)) %>% ungroup()
 
-merge_plot_2<-left_join(merge_plot,sub_series_average, by = "recount_sequence.x")
+ggplot(average_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence))) + geom_point() + geom_line(aes(y = mean_sub_mean))
+
+
+
+
+
+# sub_series_average<-merge_plot %>% group_by(recount_sequence.x) %>%
+#   summarize(mean_sub_series = mean(sub_series_mean)) %>% ungroup()
+# 
+# merge_plot_2<-left_join(merge_plot,sub_series_average, by = "recount_sequence.x")
+
+
 
 # Issue is it is only plotting the first sub_series 
 ggplot(merge_plot_2, aes(x = recount_stream_index, y = sub_series_run_prob, color = recount_sequence.x, group = as.factor(sub_series))) + geom_point()
