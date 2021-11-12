@@ -276,39 +276,4 @@ ggplot(average_df,aes(x = recount_stream_index, y = sub_series_run_prob, color =
 
 
 
-
-# sub_series_average<-merge_plot %>% group_by(recount_sequence.x) %>%
-#   summarize(mean_sub_series = mean(sub_series_mean)) %>% ungroup()
-# 
-# merge_plot_2<-left_join(merge_plot,sub_series_average, by = "recount_sequence.x")
-
-
-
-# Issue is it is only plotting the first sub_series 
-ggplot(merge_plot_2, aes(x = recount_stream_index, y = sub_series_run_prob, color = recount_sequence.x, group = as.factor(sub_series))) + geom_point()
-
-  geom_hline(aes(yintercept = mean_sub_series, color = recount_sequence.x)) + geom_point()
-
-
-# having issues with the hline 
-
-## getting closer .. 
-ggplot(merge_plot,aes(x = recount_stream_index, y = sub_series_run_prob, color = recount_sequence.x))+
- geom_hline(aes(yintercept=sub_series_mean, linetype =as.factor(recount_sequence.x))) + 
-    geom_point() + facet_wrap(~sub_series)
-  # geom_point(aes(x = mean(recount_stream_index),y = sub_series_mean, size = .4, color = recount_sequence.x))
-
- # geom_hline(yintercept = sub_series_mean) +
-
-
-sub_series_avg<-merge_plot %>% group_by(recount_sequence.x) %>%
-  summarize(mean_sub_series = mean(sub_series_mean))
-
-
-## getting closer .. 
-ggplot(merge_plot,aes(x = recount_stream_index, y = sub_series_run_prob, color = recount_sequence.x))+
- geom_hline(aes(yintercept=mean_sub_series, linetype =as.factor(recount_sequence.x))) + 
-    geom_point() 
-
-
 ```
