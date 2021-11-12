@@ -237,27 +237,43 @@ test_df <- test_df %>% group_by(sub_series) %>%
          sub_series_cum_run_prob = sub_series_sum / sub_series_total, # total sum as denom
          sub_series_run_prob = sub_series_sum / recount_stream_index) %>% ungroup()
 
-## now group by sequence for averagve B and A
-
+## now group by sequence for average B and A
 
 sum_one<- test_df %>% group_by(sub_series, recount_sequence) %>%
   summarize(sub_series_mean = mean(sub_series_run_prob)) %>% ungroup()
 
 merge_plot <- left_join(test_df,sum_one, by = "sub_series")
 
+# now average across the sub_series...
+
+sub_series_average<-merge_plot %>% group_by(recount_sequence.x) %>%
+  summarize(mean_sub_series = mean(sub_series_mean)) %>% ungroup()
+
+merge_plot_2<-left_join(merge_plot,sub_series_average, by = "recount_sequence.x")
+
+ggplot(merge_plot_2, aes(x = recount_stream_index, y = sub_series_run_prob, color = recount_sequence.x, group = sub_series)) +
+  geom_hline(aes(yintercept = mean_sub_series, color = recount_sequence.x)) + geom_point()
+
+
 # having issues with the hline 
 
 ## getting closer .. 
 ggplot(merge_plot,aes(x = recount_stream_index, y = sub_series_run_prob, color = recount_sequence.x))+
-  geom_point() +
- geom_hline(aes(yintercept=(sub_series_mean), color = as_factor(sub_series)), alpha=0.3) + facet_wrap(~sub_series)
+ geom_hline(aes(yintercept=sub_series_mean, linetype =as.factor(recount_sequence.x))) + 
+    geom_point() + facet_wrap(~sub_series)
   # geom_point(aes(x = mean(recount_stream_index),y = sub_series_mean, size = .4, color = recount_sequence.x))
 
  # geom_hline(yintercept = sub_series_mean) +
 
 
+sub_series_avg<-merge_plot %>% group_by(recount_sequence.x) %>%
+  summarize(mean_sub_series = mean(sub_series_mean))
 
 
+## getting closer .. 
+ggplot(merge_plot,aes(x = recount_stream_index, y = sub_series_run_prob, color = recount_sequence.x))+
+ geom_hline(aes(yintercept=mean_sub_series, linetype =as.factor(recount_sequence.x))) + 
+    geom_point() 
 
 
 ```
