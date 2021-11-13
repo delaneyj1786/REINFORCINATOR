@@ -255,7 +255,7 @@ ggplot(test_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (r
 sum_one<- test_df %>% group_by(sub_series, recount_sequence) %>%
   summarize(sub_series_mean = mean(sub_series_run_prob)) %>% ungroup()
 
-merge_plot <- left_join(test_df,sum_one, by = "sub_series")
+#merge_plot <- left_join(test_df,sum_one, by = "sub_series")
 
 ggplot(filter(sum_one, recount_sequence != "R"),aes(x = sub_series, y = sub_series_mean, color = (recount_sequence))) + geom_point() + geom_line() + 
   ggtitle("Average Sub-Series Probabilities By Sequence") + 
