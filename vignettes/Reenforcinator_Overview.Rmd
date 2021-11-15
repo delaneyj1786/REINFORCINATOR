@@ -280,7 +280,18 @@ ggplot(average_df,aes(x = recount_stream_index, y = sub_series_run_prob, color =
   xlab("Observation Sequence") + 
   ylab("Running Probabilities of Target")
 
+```
 
 
 
+
+## Using Sage Data Test
+```{r load test sage data}
+require(readr)
+sub1<-read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage Analysis/jamedat3_sub1.csv")
+
+sub2<- read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage Analysis/jamedat3_sub2.csv")
+
+
+sub3 <- read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage Analysis/jamedat3_sub2.csv")
 ```
