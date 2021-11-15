@@ -295,7 +295,10 @@ sub2<- read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage Ana
 sub2_clean <- sub2 %>% filter(!is.na(BEH))
 
 
-sub3 <- read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage Analysis/jamedat3_sub2.csv")
+sub3 <- read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage Analysis/jamedat3_sub3.csv")
+dim(sub3)
+sub3_clean<-na.omit(sub3)
+dim(sub3)
 ```
 
 
@@ -328,6 +331,43 @@ sum_one_sub2<- test_sub2_df%>% group_by(sub_series, recount_sequence) %>%
 #merge_plot <- left_join(test_df,sum_one, by = "sub_series")
 
 ggplot(filter(sum_one_sub2, recount_sequence != "R"),aes(x = sub_series, y = sub_series_mean, color = (recount_sequence))) + geom_point() + geom_line() + 
+  ggtitle("Average Sub-Series Probabilities By Sequence") + 
+  xlab("Sub-Series") + 
+  ylab("Average Sequence Probabilities")
+```
+
+
+# SUB 3 TEST 
+
+```{r sub 3 plot 1}
+require(tidyverse)
+test_sub3_df<-recounter(sub3_clean,BEH,"OA","A")$recounted_data_frame
+
+test_sub3_df <- test_sub3_df %>% group_by(sub_series) %>%
+  mutate(sub_series_sum = cumsum(recount_recode_numeric),   # uses the total sum ... not running 
+         sub_series_total = max(recount_stream_index),
+         sub_series_cum_run_prob = sub_series_sum / sub_series_total, # total sum as denom
+         sub_series_run_prob = sub_series_sum / recount_stream_index) %>% ungroup()
+
+# Plot shows the main probabilities (which don't change)
+# But also shows the shifting of sequence (the colors)
+# Thus the average value changes for each sub-series (e.g., Before [red] takes over)
+ggplot(test_sub3_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence), group = sub_series)) + geom_point() +facet_grid(~sub_series) + 
+  ggtitle("Running Sequence Probabilities By Sub-Series")+
+  xlab("Observation Sequence") + 
+  ylab("Running Probability")
+
+```
+
+
+
+```{r sub 3 plot 2}
+sum_one_sub3<- test_sub3_df%>% group_by(sub_series, recount_sequence) %>%
+  summarize(sub_series_mean = mean(sub_series_run_prob)) %>% ungroup()
+
+#merge_plot <- left_join(test_df,sum_one, by = "sub_series")
+
+ggplot(filter(sum_one_sub3, recount_sequence != "R"),aes(x = sub_series, y = sub_series_mean, color = (recount_sequence))) + geom_point() + geom_line() + 
   ggtitle("Average Sub-Series Probabilities By Sequence") + 
   xlab("Sub-Series") + 
   ylab("Average Sequence Probabilities")
