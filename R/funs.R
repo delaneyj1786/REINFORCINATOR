@@ -476,9 +476,9 @@ Recounter5 <- function(data,behaviorstream,
 ################ SHINY VERSION RECOUNTER
 # Note - this is the same function but WITHOUT the data frame
 Recounter2 <-function(behaviorstream, behavior,consequence, actor = NULL, missing_data = NULL){ # adding actor = FALSE ... for now ...
-  #  if(!is.null(missing_data)){
-  #    behaviorstream <- behaviorstream %>% filter(is.na(behavior))
-  #  }
+   # if(!is.null(missing_data)){
+   #   behaviorstream <- behaviorstream %>% filter(!is.na())
+   # }
   ## ** Descriptive Check ** #
   n_obs <- length(behaviorstream)                         # n observations
   n_tar <- length(which(behaviorstream == behavior))      # n behaviors
