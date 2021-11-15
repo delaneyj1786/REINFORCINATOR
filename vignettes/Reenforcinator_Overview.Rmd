@@ -292,6 +292,8 @@ sub1<-read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage Anal
 
 sub2<- read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage Analysis/jamedat3_sub2.csv")
 
+sub2_clean <- sub2 %>% filter(!is.na(BEH))
+
 
 sub3 <- read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage Analysis/jamedat3_sub2.csv")
 ```
@@ -300,7 +302,7 @@ sub3 <- read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage An
 # SUB 2 Test
 ```{r sub 2 plot 1}
 require(tidyverse)
-test_sub2_df<-recounter(sub2,BEH,"OA","A")$recounted_data_frame
+test_sub2_df<-recounter(sub2_clean,BEH,"OA","A")$recounted_data_frame
 
 test_sub2_df <- test_sub2_df %>% group_by(sub_series) %>%
   mutate(sub_series_sum = cumsum(recount_recode_numeric),   # uses the total sum ... not running 
@@ -320,26 +322,6 @@ ggplot(test_sub2_df,aes(x = recount_stream_index, y = sub_series_run_prob, color
 
 
 ```{r sub 2 plot 2}
-require(tidyverse)
-test_sub2_df<-recounter(sub2,BEH,"OA","A")$recounted_data_frame
-
-test_sub2_df <- test_sub2_df %>% group_by(sub_series) %>%
-  mutate(sub_series_sum = cumsum(recount_recode_numeric),   # uses the total sum ... not running 
-         sub_series_total = max(recount_stream_index),
-         sub_series_cum_run_prob = sub_series_sum / sub_series_total, # total sum as denom
-         sub_series_run_prob = sub_series_sum / recount_stream_index) %>% ungroup()
-
-# Plot shows the main probabilities (which don't change)
-# But also shows the shifting of sequence (the colors)
-# Thus the average value changes for each sub-series (e.g., Before [red] takes over)
-ggplot(test_sub2_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence), group = sub_series)) + geom_point() +facet_grid(~sub_series) + 
-  ggtitle("Running Sequence Probabilities By Sub-Series")+
-  xlab("Observation Sequence") + 
-  ylab("Running Probability")
-
-
-
-
 sum_one_sub2<- test_sub2_df%>% group_by(sub_series, recount_sequence) %>%
   summarize(sub_series_mean = mean(sub_series_run_prob)) %>% ungroup()
 
