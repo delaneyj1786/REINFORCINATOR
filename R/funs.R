@@ -314,6 +314,11 @@ Recounter5 <- function(data,behaviorstream,
                        missing_data = NULL){ # adding actor = FALSE ... for now ...
 
   data <-as.data.frame(data)
+  # filter out NA
+  data <- data[,!is.na(behaviorstream)]
+
+#  behaviorstream <- behaviorstream[!is.na(behaviorstream)]
+
   # # only if there are reinforcers ...
   # if(length(which(data[,behaviorstream]==consequence))> 0){
   #
