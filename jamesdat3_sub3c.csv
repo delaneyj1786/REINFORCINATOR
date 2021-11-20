@@ -1,0 +1,760 @@
+VIDLET,VIDNUM,TARSEQ,TAR,PART,BEH,DESC,TYPE
+AA,1121,1,JOL,JOL,OP,listening to T,SELF
+AA,1121,1,JOL,JOL,OP,listening to T,SELF
+AA,1121,1,JOL,JOL,OP,listening to T,SELF
+AA,1121,1,JOL,JOL,OP,listening to T,SELF
+AA,1121,1,JOL,JOL,OP,looks at GRG,SELF
+AA,1121,1,JOL,JOL,OP,listening to T,SELF
+AA,1121,1,JOL,JOL,OP,listening to T,SELF
+AA,1121,2,JOR,AAW,C,listens,PEER
+AA,1121,2,JOR,JOR,M,goes to desk,SELF
+AA,1121,2,JOR,JOR,OP,writes,SELF
+AA,1121,2,JOR,JOR,XP,talks to XXX,SELF
+AA,1121,2,JOR,XXX,C,replies,NP
+AA,1121,2,JOR,JOR,XP,smiles,SELF
+AA,1121,2,JOR,XXX,C,watches,NP
+AA,1121,2,JOR,JOR,XA,talks to XXX,SELF
+DD,1115,20,SHS,SHS,OA,shows MEW her bracelet,SELF
+DD,1115,20,SHS,MEW,C,responds,NP
+DD,1115,20,SHS,SHS,OA,talks to CHC,SELF
+DD,1115,20,SHS,CHC,C,responds,NP
+DD,1115,21,MEM,MEM,OP,reading,SELF
+DD,1115,21,MEM,MEM,OP,put bookmark in book,SELF
+DD,1115,21,MEM,MEM,OP,closed book,SELF
+DD,1115,21,MEM,MEM,OP,listens to T who addresses class,SELF
+DD,1115,21,MEM,MEM,OP,listens to T,SELF
+DD,1115,21,MEM,MEM,OP,listens to T,SELF
+DD,1115,21,MEM,MEM,OP,listens to T,SELF
+DD,1115,21,MEM,MEM,OP,listens to T,SELF
+DD,1115,21,MEM,MEM,OP,listens to T,SELF
+DD,1115,21,MEM,MEM,OP,mumbles to self,SELF
+DD,1115,21,MEM,MEM,OP,looks at JOC write on board,SELF
+DD,1115,21,MEM,MEM,OP,looks at JOC write on board,SELF
+DD,1115,21,MEM,MEM,OP,looks at JOC write on board,SELF
+DD,1115,21,MEM,MEM,OP,looks at JOC write on board,SELF
+DD,1115,21,MEM,MEM,OP,listens to BRH talk to other social partner,SELF
+DD,1115,21,MEM,MEM,OP,looks at board,SELF
+DD,1115,21,MEM,MEM,OP,watching JOC write on board,SELF
+DD,1115,21,MEM,MEM,OP,looks at board,SELF
+DD,1115,22,GRG,GRG,OP,watches JOC at board,SELF
+DD,1115,22,GRG,GRG,OP,watches JOC at board,SELF
+DD,1115,22,GRG,GRG,OP,watches JOC at board,SELF
+DD,1115,22,GRG,GRG,OA,raises hand,SELF
+DD,1115,22,GRG,T,C,calls on GRG,TEACHER
+DD,1115,22,GRG,GRG,OA,answers question,SELF
+DD,1115,22,GRG,T,P,T asks GRG another question,TEACHER
+DD,1115,22,GRG,GRG,OA,responds,SELF
+DD,1115,22,GRG,T,C,responds,TEACHER
+MD,1113,15,LIB,LIB,OA,speaks to ANK,SELF
+MD,1113,15,LIB,ANK,C,listens,NP
+MD,1113,15,LIB,LIB,OA,speaks to AAW,SELF
+MD,1113,15,LIB,AAW,C,responds,NP
+MD,1113,15,LIB,LIB,OP,writing,SELF
+MD,1113,15,LIB,LIB,OA,raises hand,SELF
+MD,1113,15,LIB,LIB,OP,reading blackboard,SELF
+MD,1113,15,LIB,LIB,OA,answers w/o raising hand,SELF
+MD,1113,15,LIB,LIB,XP,playing w/AAW,SELF
+MD,1113,15,LIB,AAW,A,laughs,NP
+MD,1113,15,LIB,LIB,OA,speaks to ANK,SELF
+MD,1113,15,LIB,ANK,C,responds,NP
+MD,1113,17,AAW,teacher,C,looking at his work,TEACHER
+MD,1113,17,AAW,AAW,OA,speaks to teahcer,SELF
+MD,1113,17,AAW,teacher,I,ignores,TEACHER
+MD,1113,17,AAW,AAW,M,moves fr. desk goes to ANK looks at her work,SELF
+MD,1113,17,AAW,AAW,OA,speaks to ANK,SELF
+MD,1113,17,AAW,ANK,I,ignores his presence,NP
+MD,1113,17,AAW,AAW,M,goes to board,SELF
+MD,1113,17,AAW,AAW,OA,writes on board,SELF
+MD,1113,17,AAW,AAW,M,goes to BRC's desk,SELF
+MD,1113,17,AAW,AAW,OA,looks at BRC's work and speaks,SELF
+MD,1113,17,AAW,BRC,C,shows work,PEER
+MD,1113,17,AAW,AAW,OP,looking at BRC's work,SELF
+MD,1113,17,AAW,BRC,C,reading work to AAW,PEER
+MD,1113,17,AAW,AAW,OA,talks,SELF
+MD,1113,17,AAW,BRC,DIS,"\no\""""",PEER
+MD,1113,18,TAJ,TAJ,OA,talking and pointing to something on TRB's paper,SELF
+MD,1113,18,TAJ,TRB,C,responds,NP
+MD,1113,18,TAJ,TAJ,OA,reads what is on TRB's paper,SELF
+SKH,1107,13,SAR,SAR,OP,watches T,SELF
+SKH,1107,13,SAR,SAR,OP,watches T,SELF
+SKH,1107,13,SAR,SAR,OP,watches T,SELF
+SKH,1107,14,BRC,BRC,OP,looks at ANW talking,SELF
+SKH,1107,14,BRC,BRC,OP,smiles-she can't see him,SELF
+SKH,1107,14,BRC,BRC,OP,doodling but listening,SELF
+SKH,1107,14,BRC,BRC,OP,doodling but listening,SELF
+SKH,1107,14,BRC,BRC,OP,doodling but listening,SELF
+SKH,1121,6,ANW,ANW,OA,Responds,SELF
+SKH,1121,6,ANW,SAR,C,listens,NP
+SKH,1121,6,ANW,ANW,OA,Reads to SAR,SELF
+SKH,1121,6,ANW,SAR,C,listens,NP
+SKH,1121,6,ANW,ANW,OP,Writes,SELF
+SKH,1121,6,ANW,SAR,P,Comments about work,NP
+SKH,1121,6,ANW,ANW,OA,Responds and laughs,SELF
+SKH,1121,6,ANW,SAR,C,attends,NP
+SKH,1121,6,ANW,ANW,OP,writes,SELF
+SKH,1121,7,RAJ,RAJ,OA,talks,SELF
+SKH,1121,7,RAJ,T,C,responds,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,work on laptop and talk,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OP,listens and types,SELF
+SKH,1121,7,RAJ,RAJ,OA,responds,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OP,listens,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,responds,SELF
+SKH,1121,7,RAJ,RAJ,OP,watches T point at keyboard,SELF
+SKH,1121,7,RAJ,RAJ,OP,types,SELF
+SKH,1121,7,RAJ,RAJ,OA,talks,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,listens responds,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,responds,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,responds,SELF
+SKH,1121,7,RAJ,RAJ,OA,types and talks,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,responds,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,responds,SELF
+SKH,1121,7,RAJ,T,A,laughs,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,talks,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,talks,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,talks,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OP,types in response,SELF
+SKH,1121,7,RAJ,T,C,Talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OA,responds,SELF
+SKH,1121,7,RAJ,T,C,talks,TEACHER
+SKH,1121,7,RAJ,RAJ,OP,Types in response,SELF
+SKH,1121,7,RAJ,RAJ,OP,Watches JOR ask T a question,SELF
+SKH,1121,7,RAJ,RAJ,OP,listens to JOR and T,SELF
+SKH,1121,7,RAJ,RAJ,OP,Types,SELF
+SKH,1121,7,RAJ,T,P,T talks,TEACHER
+SKH,1121,8,AAW,AAW,OP,looking at a book,SELF
+SKH,1121,8,AAW,AAW,OA,Comment to BRC,SELF
+SKH,1121,8,AAW,BRC,C,Looks at book and talks,PEER
+SKH,1121,8,AAW,AAW,OA,talks,SELF
+SKH,1121,8,AAW,BRC,C,listens,PEER
+SKH,1121,8,AAW,AAW,OA,talks,SELF
+SKH,1121,8,AAW,BRC,C,listens and asks a question,PEER
+SKH,1121,8,AAW,AAW,OA,answers,SELF
+SKH,1121,8,AAW,BRH,P,approaches and asks a questions,PEER
+SKH,1121,8,AAW,AAW,OA,answers,SELF
+SKH,1121,8,AAW,BRH,I,looks at BRC,PEER
+SKH,1121,8,AAW,AAW,OP,Watches BRH and BRC talk,SELF
+SKH,1121,8,AAW,AAW,OP,Watches BRH leave,SELF
+SKH,1121,8,AAW,AAW,OA,Comment about work to BRC,SELF
+SKH,1121,8,AAW,BRC,C,Responds,PEER
+SKH,1121,8,AAW,AAW,OP,Reads and listens,SELF
+SKH,1121,8,AAW,AAW,OA,Talks,SELF
+SKH,1121,8,AAW,BRC,C,responds,PEER
+SKH,1121,8,AAW,AAW,OP,listens,SELF
+SKH,1121,8,AAW,AAW,OA,Talks,SELF
+SKH,1121,8,AAW,BRC,C,listens,PEER
+SKH,1121,8,AAW,AAW,OA,talks,SELF
+SKH,1121,8,AAW,BRC,C,Responds,PEER
+SKH,1121,8,AAW,AAW,OA,Reads out loud,SELF
+SKH,1121,8,AAW,BRC,C,writes in response,PEER
+SKH,1121,8,AAW,AAW,OA,Reads out loud,SELF
+SKH,1121,8,AAW,BRC,C,asks question,PEER
+SKH,1121,8,AAW,AAW,OA,answers,SELF
+SKH,1121,8,AAW,BRC,C,talks,PEER
+SKH,1121,8,AAW,AAW,OP,listens,SELF
+SKH,1121,8,AAW,AAW,OA,Reads to BRC,SELF
+SKH,1121,8,AAW,BRC,C,listens and writes,PEER
+SKH,1121,9,SAR,SAR,OP,Writes,SELF
+SKH,1121,9,SAR,SAR,OP,Writes,SELF
+SKH,1121,9,SAR,SAR,OP,Writes,SELF
+SKH,1121,9,SAR,SAR,OA,Comment to ANK,SELF
+SKH,1121,9,SAR,ANK,C,responds,NP
+SKH,1121,9,SAR,SAR,OA,talks,SELF
+SKH,1121,9,SAR,ANK,C,listens,NP
+SKH,1121,9,SAR,ANK,C,talks,NP
+SKH,1121,9,SAR,SAR,OP,listens,SELF
+SKH,1121,9,SAR,SAR,OA,responds,SELF
+SKH,1121,9,SAR,ANK,C,talks,NP
+SKH,1121,9,SAR,SAR,OP,listens and writes,SELF
+SKH,1121,13,MEM,MEM,OA,Talks and points at computer,SELF
+SKH,1121,13,MEM,MEW,C,types in response,PEER
+SKH,1121,13,MEM,MEM,OA,Talks,SELF
+SKH,1121,13,MEM,MEW,C,Types and talks,PEER
+SKH,1121,13,MEM,MEM,OA,Talks,SELF
+SKH,1121,13,MEM,MEW,C,Responds and stands up,PEER
+SKH,1121,13,MEM,MEM,OP,Sits down and types,SELF
+SKH,1121,13,MEM,MEM,OP,types,SELF
+SKH,1121,14,ANW,ANW,OA,Talks to SHS,SELF
+SKH,1121,14,ANW,SHS,C,responds and looks at her paper,NP
+SKH,1121,14,ANW,ANW,OA,Reads out loud,SELF
+SKH,1121,14,ANW,SHS,C,Listens,NP
+SKH,1121,14,ANW,ANW,OA,Reads out loud,SELF
+SKH,1121,14,ANW,SHS,C,listens,NP
+SKH,1121,14,ANW,ANW,OA,Reads out loud,SELF
+SKH,1121,14,ANW,SHS,C,listens,NP
+SKH,1121,14,ANW,ANW,OA,Reads out loud,SELF
+SKH,1121,14,ANW,SHS,C,listens,NP
+SKH,1121,14,ANW,SHS,C,Comments,NP
+SKH,1121,14,ANW,ANW,OP,Watchs SHS type,SELF
+SKH,1121,14,ANW,ANW,OP,Watches SHS type,SELF
+SKH,1121,14,ANW,ANW,OA,Asks T a question,SELF
+SKH,1121,14,ANW,T,C,responds,TEACHER
+SKH,1121,14,ANW,ANW,OA,talks to T,SELF
+SKH,1121,14,ANW,T,C,responds,TEACHER
+SKH,1121,14,ANW,ANW,OP,listens,SELF
+SKH,1121,14,ANW,ANW,OA,Responds,SELF
+SKH,1121,14,ANW,T,C,Responds,TEACHER
+SKH,1121,14,ANW,ANW,OA,Talks,SELF
+SKH,1121,14,ANW,T,C,listens,TEACHER
+SKH,1121,14,ANW,ANW,OA,Talks,SELF
+SKH,1121,14,ANW,T,C,talks,TEACHER
+SKH,1121,14,ANW,ANW,OP,listens,SELF
+SKH,1121,14,ANW,T,C,talks,TEACHER
+SKH,1121,14,ANW,ANW,OP,listens,SELF
+SKH,1121,15,KRW,KRW,OP,Listening to SET talk to SAM,SELF
+SKH,1121,15,KRW,KRW,OP,Looks at book,SELF
+SKH,1121,15,KRW,SET,C,talks,NP
+SKH,1121,15,KRW,KRW,OP,listens,SELF
+SKH,1121,15,KRW,KRW,OP,reads,SELF
+SKH,1121,15,KRW,KRW,OP,reads,SELF
+SKH,1121,15,KRW,SET,C,talks,NP
+SKH,1121,15,KRW,KRW,OA,responds,SELF
+SKH,1121,15,KRW,SET,C,Asks question,NP
+SKH,1121,15,KRW,KRW,OA,responds,SELF
+SKH,1121,15,KRW,SET,C,talks,NP
+SKH,1121,15,KRW,KRW,OP,listens,SELF
+SKH,1121,15,KRW,KRW,OA,asks question,SELF
+SKH,1121,15,KRW,SET,C,Responds,NP
+SKH,1121,15,KRW,KRW,OA,Asks question,SELF
+SKH,1121,15,KRW,SET,C,Responds,NP
+SKH,1121,15,KRW,KRW,OP,Listens,SELF
+SKH,1121,15,KRW,KRW,OA,talks,SELF
+SKH,1121,15,KRW,SET,C,Responds,NP
+SKH,1121,15,KRW,KRW,OP,Reads,SELF
+SKH,1121,15,KRW,KRW,XP,Watches another kid goof off,SELF
+SKH,1121,15,KRW,KRW,XA,Comment and laugh to SAM,SELF
+SKH,1121,15,KRW,SAM,A,laughs,PEER
+SKH,1121,15,KRW,KRW,OP,reads,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,16,SHS,SHS,OP,Types,SELF
+SKH,1121,17,ANK,ANK,XA,Talks-not on task,SELF
+SKH,1121,17,ANK,SAR,A,Responds and smiles,NP
+SKH,1121,17,ANK,ANK,XA,Talks and smiles,SELF
+SKH,1121,17,ANK,SAR,A,laughs,NP
+SKH,1121,17,ANK,ANK,OA,talks about work,SELF
+SKH,1121,17,ANK,ANK,OP,Digs through binder,SELF
+SKH,1121,17,ANK,SAR,C,Comments and points at ANK's desk,NP
+SKH,1121,17,ANK,ANK,XP,Goes and gets  paper for her,SELF
+SKH,1121,17,ANK,ANK,XA,Returns and talks,SELF
+SKH,1121,17,ANK,SAR,C,Responds,NP
+SKH,1121,17,ANK,SAR,C,Shows something a paper-doesn't appear to be work related,NP
+SKH,1121,17,ANK,ANK,XA,Looks and smiles,SELF
+SKH,1121,17,ANK,SAR,C,attends,NP
+SKH,1121,17,ANK,ANK,OP,Writes on original paper,SELF
+SKH,1121,17,ANK,SAR,C,talks,NP
+SKH,1121,17,ANK,ANK,OP,listens,SELF
+SKH,1121,17,ANK,ANK,XP,Watches T talk to someone-not pertinent to her work,SELF
+SKH,1121,17,ANK,SAR,C,Comment- appears to be about T's conversation,NP
+SKH,1121,17,ANK,ANK,XA,Responds,SELF
+SKH,1121,17,ANK,SAR,C,listens,NP
+SKH,1121,17,ANK,ANK,OP,Writes,SELF
+SKH,1121,17,ANK,SAR,C,Comment,NP
+SKH,1121,17,ANK,ANK,OA,Laughs and responds while writing,SELF
+SKH,1121,17,ANK,SAR,C,listens,NP
+SKH,1121,17,ANK,ANK,OP,Writes,SELF
+SKH,1121,17,ANK,ANK,OA,Comment to SAR,SELF
+SKH,1121,17,ANK,SAR,C,Listens and watches her write,NP
+SKH,1121,17,ANK,ANK,OA,Writes and talks,SELF
+SKH,1121,17,ANK,SAR,C,Responds,NP
+SKH,1121,17,ANK,ANK,OP,writes,SELF
+SKH,1121,17,ANK,ANK,OP,writes,SELF
+SKH,1121,17,ANK,SAR,C,comment,NP
+SKH,1121,17,ANK,ANK,OA,laughs,SELF
+SKH,1121,17,ANK,ANK,OP,Writes,SELF
+SKH,1121,17,ANK,SAR,C,Comments,NP
+SKH,1121,17,ANK,ANK,OA,Responds,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,XP,Looks at kids in other classroom,SELF
+SKH,1121,18,GRG,GRG,XP,Looks at kids in other classroom,SELF
+SKH,1121,18,GRG,GRG,XP,Looks at kids in other classroom,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,18,GRG,GRG,OP,Types,SELF
+SKH,1121,19,TRB,TRB,OP,Looks at work,SELF
+SKH,1121,19,TRB,WID,P,asks her a question,NP
+SKH,1121,19,TRB,TRB,OA,Responds,SELF
+SKH,1121,19,TRB,TRB,XA,Responds,SELF
+SKH,1121,19,TRB,TRB,XA,laughs,SELF
+SKH,1121,19,TRB,LIB,A,laughs with,PEER
+SKH,1121,19,TRB,TRB,XP,Looks at MEW,SELF
+SKH,1121,19,TRB,TRB,OP,Looks at T,SELF
+SKH,1121,19,TRB,T,C,Asks her a question,TEACHER
+SKH,1121,19,TRB,TRB,OA,Shows paper and talks,SELF
+SKH,1121,19,TRB,TRB,OP,Tidies papers,SELF
+SKH,1121,19,TRB,TRB,XP,Looks at SHS,SELF
+SKH,1121,19,TRB,TRB,XA,Points at something on SHS's desk and talks,SELF
+SKH,1121,19,TRB,TRB,OP,Returns to desk,SELF
+SKH,1121,19,TRB,TRB,OP,Fiddles with binder,SELF
+SKH,1121,19,TRB,TRB,OP,tidies desk,SELF
+SKH,1121,20,BRH,BRH,OP,Watches ANW talk,SELF
+SKH,1121,20,BRH,BRH,OA,talks,SELF
+SKH,1121,20,BRH,ANW,C,responds,PEER
+SKH,1121,20,BRH,BRH,OA,talks,SELF
+SKH,1121,20,BRH,ANW,C,responds,PEER
+SKH,1121,20,BRH,BRH,OP,Listens,SELF
+SKH,1121,20,BRH,BRH,OP,Listens,SELF
+SKH,1121,20,BRH,BRH,OP,Listens,SELF
+SKH,1121,20,BRH,MAK,P,Whispers to him,PEER
+SKH,1121,20,BRH,BRH,OP,Shrugs,SELF
+SKH,1121,20,BRH,BRH,OP,Listens to ANW,SELF
+SKH,1121,20,BRH,ANW,C,Asks him a question,PEER
+SKH,1121,20,BRH,BRH,OA,Nods,SELF
+SKH,1121,20,BRH,BRH,C,attends,SELF
+SKH,1121,20,BRH,BRH,OP,Listens,SELF
+SKH,1121,20,BRH,BRH,OP,Listens,SELF
+SKH,1121,20,BRH,BRH,OP,Listens to MAK talk to ANW,SELF
+SKH,1121,20,BRH,BRH,OP,Listens to T,SELF
+SKH,1121,20,BRH,BRH,XP,Watches SAM,SELF
+SKH,1121,20,BRH,BRH,OP,Watches TA,SELF
+SKH,1121,20,BRH,BRH,OP,Listens to T,SELF
+SKH,1121,20,BRH,BRH,OA,Comment to MAK,SELF
+SKH,1121,20,BRH,MAK,C,listens,PEER
+SKH,1121,20,BRH,BRH,OP,Listens to T,SELF
+SKH,1121,21,LIB,LIB,OP,Listens to AAW talk while looking through binder,SELF
+SKH,1121,21,LIB,LIB,OP,puts binder away,SELF
+SKH,1121,21,LIB,AAW,C,talks,NP
+SKH,1121,21,LIB,LIB,XA,responds,SELF
+SKH,1121,21,LIB,AAW,C,listens,NP
+SKH,1121,21,LIB,LIB,XA,chats and gets sack out of desk,SELF
+SKH,1121,21,LIB,AAW,C,Responds,NP
+SKH,1121,21,LIB,LIB,OP,Looks at speaker,SELF
+SKH,1121,21,LIB,LIB,XP,Watches JOC and BRC goof around,SELF
+SKH,1121,21,LIB,LIB,OP,Looks at speaker,SELF
+SKH,1121,21,LIB,LIB,OP,Looks at speaker,SELF
+SKH,1121,21,LIB,LIB,XP,Pulls bag of chips out of bag,SELF
+SKH,1121,21,LIB,LIB,XA,Gives one to AAW,SELF
+SKH,1121,21,LIB,AAW,C,Accepts,NP
+SKH,1121,21,LIB,LIB,OP,Eats and watches speaker,SELF
+SKH,1121,21,LIB,LIB,XP,Watches AAW wave at BRC,SELF
+SKH,1121,21,LIB,LIB,OP,looks at speaker,SELF
+SKH,1121,21,LIB,LIB,OP,looks at speaker,SELF
+SKH,1121,21,LIB,LIB,OP,looks at speaker,SELF
+SKH,1121,22,JOR,JOR,XP,Looks at MEM doodle,SELF
+SKH,1121,22,JOR,JOR,OP,Belatedly pulls out binder,SELF
+SKH,1121,22,JOR,JOR,XP,Looks at SAR talk,SELF
+SKH,1121,22,JOR,JOR,OP,looks at speaker,SELF
+SKH,1121,22,JOR,JOR,XP,Listens to voice on intercom-not pertinent to his work,SELF
+SKH,1121,22,JOR,JOR,XP,Watches SAR,SELF
+SKH,1121,22,JOR,JOR,XP,Sorts paper,SELF
+SKH,1121,22,JOR,JOR,XA,Comment to SAR-not on task,SELF
+SKH,1121,22,JOR,SAR,C,comment,NP
+SKH,1121,22,JOR,JOR,XA,responds,SELF
+SKH,1121,22,JOR,SAR,C,listens,NP
+SKH,1121,22,JOR,JOR,XP,Sorts papers,SELF
+SKH,1121,22,JOR,JOR,OP,Looks at speaker,SELF
+SKH,1121,22,JOR,JOR,OP,Writes,SELF
+SKH,1121,22,JOR,JOR,OP,Writes,SELF
+SKH,1121,22,JOR,JOR,XP,Looks at SAR,SELF
+SKH,1121,22,JOR,JOR,OP,Writes,SELF
+SKH,1121,22,JOR,SAR,P,Comments,NP
+SKH,1121,22,JOR,JOR,XA,Makes a funny face-not mean,SELF
+SKH,1121,22,JOR,SAR,C,attends,NP
+SKH,1121,22,JOR,JOR,OP,looks at speaker,SELF
+SKH,1121,22,JOR,JOR,OA,Raises hand,SELF
+SKH,1121,22,JOR,JOR,OP,Not called-listens to answer,SELF
+SKH,1121,22,JOR,JOR,OP,Looks through binder,SELF
+SKH,1121,22,JOR,JOR,OP,gets papers,SELF
+SKH,1121,22,JOR,JOR,OP,puts away,SELF
+SKH,1121,22,JOR,JOR,OP,looks at speaker,SELF
+SKH,1121,22,JOR,JOR,OP,looks at weaving but listens,SELF
+SKH,1121,23,BRC,BRC,OP,Writes,SELF
+SKH,1121,23,BRC,BRC,XP,Looks at MEW,SELF
+SKH,1121,23,BRC,BRC,XA,comments,SELF
+SKH,1121,23,BRC,MEW,I,no response,NP
+SKH,1121,23,BRC,BRC,OP,looks at speaker,SELF
+SKH,1121,23,BRC,BRC,XP,Looks at SHS,SELF
+SKH,1121,23,BRC,BRC,XP,Watches MEW and SHS whisper,SELF
+SKH,1121,23,BRC,BRC,OP,looks at speaker,SELF
+SKH,1121,23,BRC,BRC,OP,Watching MEW and SHS but listening,SELF
+SKH,1121,23,BRC,BRC,XP,Watches SHS answer,SELF
+SKH,1121,23,BRC,BRC,OP,Watches speaker,SELF
+SKH,1121,23,BRC,BRC,OA,Comment to MEW,SELF
+SKH,1121,23,BRC,MEW,A,Laughs and shrugs,NP
+SKH,1121,23,BRC,BRC,XP,talks to self,SELF
+SKH,1121,23,BRC,BRC,XA,Comment to SHS-not pertaining to work,SELF
+SKH,1121,23,BRC,SHS,A,Laughs,NP
+SKH,1121,23,BRC,BRC,OP,Watches MEW and listens,SELF
+SKH,1121,23,BRC,BRC,OP,doodles and listens,SELF
+SKH,1121,23,BRC,BRC,XA,Comment to MEW,SELF
+SKH,1121,23,BRC,CHC,A,CHC hears and laughs,NP
+SKH,1121,23,BRC,BRC,XA,Smiles and laughs,SELF
+SKH,1121,23,BRC,BRC,XP,Watches CHC draw,SELF
+SKH,1121,24,CHC,CHC,OP,Looks at book,SELF
+SKH,1121,24,CHC,BRC,A,comments at something in book and laughs,NP
+SKH,1121,24,CHC,CHC,OA,Looks and laughs,SELF
+SKH,1121,24,CHC,CHC,OP,looks at speaker,SELF
+SKH,1121,25,MAK,MAK,OP,Watches speaker,SELF
+SKH,1121,25,MAK,MAK,OP,Watches speaker,SELF
+SKH,1121,25,MAK,MAK,OP,Watches speaker,SELF
+SKH,1121,25,MAK,MAK,XP,Looks at observer,SELF
+SKH,1121,25,MAK,MAK,OP,Looks at ANK,SELF
+SKH,1121,25,MAK,MAK,OP,Looks at speaker,SELF
+SKH,1121,25,MAK,MAK,OP,opens pencil case,SELF
+SKH,1121,25,MAK,MAK,OP,roots through and gets eraser,SELF
+SKH,1121,25,MAK,MAK,XP,Plays with it-doesn't appear to be listening,SELF
+SKH,1121,25,MAK,MAK,OP,Looks at speaker,SELF
+SKH,1121,25,MAK,MAK,OP,Chews eraser and listens,SELF
+SKH,1121,25,MAK,MAK,OP,Chews eraser and listens,SELF
+SKH,1121,25,MAK,MAK,OP,Chews eraser and listens,SELF
+SKH,1121,25,MAK,MAK,OP,Chews eraser and listens,SELF
+SKH,1121,25,MAK,MAK,XP,looks at observer,SELF
+SKH,1121,25,MAK,MAK,OP,Watches speaker,SELF
+SKH,1121,25,MAK,MAK,OP,Watches speaker,SELF
+SKH,1121,25,MAK,MAK,OP,Watches speaker,SELF
+SKH,1121,25,MAK,MAK,OP,Watches speaker,SELF
+SKH,1121,25,MAK,MAK,OP,Watches speaker,SELF
+SKH,1121,26,BEH,BEH,OP,watches speaker,SELF
+SKH,1121,26,BEH,BEH,OP,watches speaker,SELF
+SKH,1121,26,BEH,BEH,OA,Ask TRB about assignment,SELF
+SKH,1121,26,BEH,TRB,C,Responds,NP
+SKH,1121,26,BEH,BEH,OP,looks through book,SELF
+SKH,1121,26,BEH,BEH,OP,looks at speaker,SELF
+SKH,1121,26,BEH,BEH,OP,looks at speaker,SELF
+SKH,1121,26,BEH,BEH,OP,looks at speaker,SELF
+SKH,1121,26,BEH,BEH,OP,looks at book,SELF
+SKH,1121,26,BEH,BEH,OP,Watches TRB write,SELF
+SKH,1121,26,BEH,BEH,OP,Writes,SELF
+SKH,1121,26,BEH,BEH,OP,Writes,SELF
+SKH,1121,26,BEH,BEH,OP,Writes,SELF
+SKH,1121,26,BEH,TRB,P,Comments,NP
+SKH,1121,26,BEH,BEH,OP,listens,SELF
+SKH,1121,26,BEH,SPK,P,Talks to him,TEACHER
+SKH,1121,26,BEH,BEH,OP,listens,SELF
+SKH,1121,26,BEH,BEH,OP,writes,SELF
+SKH,1121,26,BEH,BEH,OP,writes,SELF
+SKH,1121,27,AAW,AAW,OP,Reads,SELF
+SKH,1121,27,AAW,AAW,OP,Reads,SELF
+SKH,1121,27,AAW,AAW,OP,Reads,SELF
+SKH,1121,27,AAW,AAW,OP,Reads,SELF
+SKH,1121,27,AAW,AAW,OP,Looks at LIB's work,SELF
+SKH,1121,27,AAW,AAW,OP,Looks at speaker,SELF
+SKH,1121,27,AAW,AAW,OP,Look at WID,SELF
+SKH,1121,27,AAW,AAW,OP,looks at book,SELF
+SKH,1121,27,AAW,AAW,OP,gets pencil,SELF
+SKH,1121,27,AAW,AAW,OP,writes,SELF
+SKH,1121,27,AAW,AAW,XA,Comment to WID-not on task,SELF
+SKH,1121,27,AAW,WID,C,Responds,PEER
+SKH,1121,27,AAW,AAW,XA,talks,SELF
+SKH,1121,27,AAW,WID,C,Gives him gum,PEER
+SKH,1121,27,AAW,AAW,OP,Watches WID write,SELF
+SKH,1121,27,AAW,AAW,OA,Comments,SELF
+SKH,1121,27,AAW,WID,C,Writes what he says,PEER
+SKH,1121,27,AAW,AAW,OP,Watches,SELF
+SKH,1121,27,AAW,AAW,OP,Writes,SELF
+SKH,1121,27,AAW,AAW,OA,Comment to WID,SELF
+SKH,1121,27,AAW,WID,C,Writes what he says,PEER
+SKH,1121,27,AAW,AAW,OP,writes,SELF
+SKH,1121,27,AAW,AAW,OP,looks at speaker,SELF
+SKH,1121,27,AAW,AAW,OP,Looks at T,SELF
+SKH,1121,27,AAW,AAW,OP,Looks at speaker,SELF
+SKH,1121,28,SAR,SAR,OP,looks at speaker,SELF
+SKH,1121,28,SAR,SAR,OP,looks at book,SELF
+SKH,1121,28,SAR,SAR,XP,Watches JOR weave,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,XP,looks at observer,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,28,SAR,SAR,OP,writes,SELF
+SKH,1121,29,JOC,JOC,OP,Writes,SELF
+SKH,1121,29,JOC,JOC,OP,Writes,SELF
+SKH,1121,29,JOC,JOC,OP,looks at speaker,SELF
+SKH,1121,29,JOC,JOC,OA,Raises hand,SELF
+SKH,1121,29,JOC,JOC,OP,Not called listens to SHS answer,SELF
+SKH,1121,29,JOC,JOC,OP,roots around in desk,SELF
+SKH,1121,29,JOC,JOC,OP,Finds something,SELF
+SKH,1121,29,JOC,JOC,OP,fiddles with it but listens,SELF
+SKH,1121,29,JOC,JOC,OP,looks at speaker,SELF
+SKH,1121,29,JOC,JOC,OA,Raises hand,SELF
+SKH,1121,29,JOC,JOC,XP,Not called-fiddles with something,SELF
+SKH,1121,29,JOC,JOC,OA,Raises hand,SELF
+SKH,1121,29,JOC,JOC,OA,Called gives answer,SELF
+SKH,1121,29,JOC,SPK,C,Speaker responds,TEACHER
+SKH,1121,29,JOC,JOC,OP,Watches speaker,SELF
+SKH,1121,29,JOC,JOC,OA,Talks to speaker,SELF
+SKH,1121,29,JOC,SPK,C,Responds,TEACHER
+SKH,1121,29,JOC,JOC,OP,Watches speaker,SELF
+SKH,1121,29,JOC,JOC,XP,Doodles - not listening,SELF
+SKH,1121,29,JOC,JOC,XP,Doodles - not listening,SELF
+SKH,1121,30,RES,RES,OP,Writes,SELF
+SKH,1121,30,RES,RES,OP,Writes,SELF
+SKH,1121,30,RES,RES,OP,Writes,SELF
+SKH,1121,30,RES,RES,OP,Writes,SELF
+SKH,1121,30,RES,RES,OP,Writes,SELF
+SKH,1121,30,RES,RES,OP,Looks at SHS talk to Speaker,SELF
+SKH,1121,30,RES,RES,OP,Looks at speaker,SELF
+SKH,1121,30,RES,RES,OP,writes,SELF
+TL,1122,1,GRG,GRG,OP,writing at desk,SELF
+TL,1122,1,GRG,GRG,OP,writing at desk,SELF
+TL,1122,2,SAR,SAR,OA,talking to ANK,SELF
+TL,1122,2,SAR,ANK,C,responds,NP
+TL,1122,2,SAR,SAR,OA,talking about assignment,SELF
+TL,1122,2,SAR,ANK,C,talking about assignment,NP
+TL,1122,2,SAR,SAR,OA,talking about assignment,SELF
+TL,1122,2,SAR,ANK,C,talking about assignment,NP
+TL,1122,2,SAR,T,P,tells her he wants them to move teir coats,TEACHER
+TL,1122,2,SAR,SAR,OA,says she will put her coat away,SELF
+TL,1122,2,SAR,T,C,listens,TEACHER
+TL,1122,2,SAR,T,P,wants them to move to other desk,TEACHER
+TL,1122,2,SAR,SAR,M,moves to other desks,SELF
+TL,1122,2,SAR,ANK,M,moves as well,NP
+TL,1122,2,SAR,SAR,OA,talking to ANK,SELF
+TL,1122,2,SAR,ANK,C,talking to SAR,NP
+TL,1122,2,SAR,SAR,OP,looking at chalk board,SELF
+TL,1122,2,SAR,SAR,M,walks to MEW's desk,SELF
+TL,1122,2,SAR,SAR,OA,asks MEW a question,SELF
+TL,1122,2,SAR,MEW,C,answers,NP
+TL,1122,2,SAR,SAR,OP,out into the library looking for something,SELF
+TL,1122,2,SAR,SAR,OA,talking to big red dog in library (dog is a person dressed up selling books),SELF
+TL,1122,2,SAR,***,A,dog talked to her,NP
+TL,1122,2,SAR,SAR,OA,talking to a T in library,SELF
+TL,1122,2,SAR,T,C,talking to SAR,TEACHER
+TL,1122,2,SAR,SAR,OA,talking,SELF
+TL,1122,4,RAJ,RAJ,OP,reading,SELF
+TL,1122,6,RES,RES,OA,says somehting else,SELF
+TL,1122,6,RES,ANW,DIS,does not agree with this either,NP
+TL,1122,6,RES,RES,OA,talking,SELF
+TL,1122,6,RES,ANW,C,talking,NP
+TL,1122,6,RES,RES,OP,writing,SELF
+TL,1122,7,RAJ,RAJ,OP,looking for encyclopedia on the shelf,SELF
+TL,1122,8,CHC,CHC,OP,writing,SELF
+TL,1122,8,CHC,CHC,OP,writing,SELF
+TL,1122,8,CHC,CHC,OP,writing,SELF
+TL,1122,8,CHC,CHC,OP,writing,SELF
+TL,1122,8,CHC,CHC,OP,writing,SELF
+TL,1122,9,SHS,SHS,M,moves to a computer,SELF
+TL,1122,9,SHS,SHS,OA,talks to ANK,SELF
+TL,1122,9,SHS,ANK,C,responds,NP
+TL,1122,9,SHS,SHS,XA,shows RES a calander,SELF
+TL,1122,9,SHS,RES,C,looks at it,NP
+TL,1122,9,SHS,LIB,P,rings the bell for class to assmble,NP
+TL,1122,9,SHS,SHS,M,moves back to desk,SELF
+TL,1122,9,SHS,SHS,OP,at desk,SELF
+TL,1122,9,SHS,SHS,OP,at desk,SELF
+TL,1122,9,SHS,SHS,OA,talks to ANK,SELF
+TL,1122,9,SHS,ANK,C,talks,NP
+TL,1122,9,SHS,SHS,M,moves to ANK's desk,SELF
+TL,1122,9,SHS,SHS,OA,talks to ANK,SELF
+TL,1122,9,SHS,ANK,C,responds,NP
+TL,1122,9,SHS,SHS,M,moves back to desk,SELF
+TL,1122,9,SHS,SHS,OP,numbers paper 1-20,SELF
+TL,1122,9,SHS,SHS,OP,writing,SELF
+TL,1122,9,SHS,ANK,M,moves to SHS's desk,NP
+TL,1122,9,SHS,ANK,P,asks for a pencil,NP
+TL,1122,9,SHS,SHS,OA,gives ANK a pencil,SELF
+TL,1122,9,SHS,ANK,C,accepts pencil,NP
+TL,1122,9,SHS,ANK,M,back to desk,NP
+TL,1122,9,SHS,SHS,OP,writing,SELF
+TL,1122,10,JOR,JOR,OP,taking the test,SELF
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,10,JOR,AAW,P,tells JOR something,PEER
+TL,1122,10,JOR,JOR,OA,says \shhhh,SELF
+TL,1122,10,JOR,AAW,C,attends,PEER
+TL,1122,10,JOR,JOR,OP,writing,SELF
+TL,1122,10,JOR,AAW,M,goes to his own desk,PEER
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,10,JOR,JOR,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,looking for pencil,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,11,AAW,AAW,OP,taking test,SELF
+TL,1122,12,TRB,TRB,OP,taking the test,SELF
+TL,1122,12,TRB,TRB,OP,taking the test,SELF
+TL,1122,12,TRB,TRB,OP,taking the test,SELF
+TL,1122,12,TRB,TRB,OP,taking the test,SELF
+TL,1122,12,TRB,TRB,OP,taking the test,SELF
+TL,1122,12,TRB,TRB,OP,taking the test,SELF
+TL,1122,12,TRB,TRB,OP,taking the test,SELF
+TL,1122,12,TRB,TRB,OP,taking the test,SELF
+TL,1122,12,TRB,TRB,OP,taking the test,SELF
+TL,1122,12,TRB,TRB,OA,talks while giving BEH her test,SELF
+TL,1122,12,TRB,BEH,C,talks to TRB,NP
+TL,1122,12,TRB,TRB,OA,talking,SELF
+TL,1122,12,TRB,BEH,C,talking,NP
+TL,1122,12,TRB,TRB,OA,gives BEH paper,SELF
+TL,1122,12,TRB,BEH,C,takes the paper,NP
+TL,1122,12,TRB,TRB,OP,correcting the test,SELF
+TL,1122,12,TRB,TRB,OP,correcting the test,SELF
+TL,1122,12,TRB,TRB,OP,correcting the test,SELF
+TL,1122,12,TRB,TRB,OP,correcting the test,SELF
+TL,1122,12,TRB,TRB,OP,correcting the test,SELF
+TL,1122,12,TRB,TRB,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,13,BEH,BEH,OP,correcting the test,SELF
+TL,1122,14,BRC,BRC,OP,looking at the board,SELF
+TL,1122,14,BRC,BRC,OP,listening to T,SELF
+TL,1122,14,BRC,BRC,M,moves to pencil sharpener,SELF
+TL,1122,14,BRC,BRC,OP,sharpens pencil,SELF
+TL,1122,14,BRC,AAW,P,asks BRC to sharpen his pencil too,PEER
+TL,1122,14,BRC,BRC,OA,says ok,SELF
+TL,1122,14,BRC,AAW,C,attends,PEER
+TL,1122,14,BRC,BRC,M,moves back to desk,SELF
+TL,1122,14,BRC,BRC,OP,writing at desk,SELF
+TL,1122,14,BRC,MEW,P,asks BRC something,NP
+TL,1122,14,BRC,BRC,OA,responds,SELF
+TL,1122,14,BRC,MEW,C,talking,NP
+TL,1122,14,BRC,BRC,OP,watches MEW & SHS talk,SELF
+TL,1122,14,BRC,BRC,OP,writing,SELF
+TL,1122,14,BRC,BRC,OP,writing,SELF
+TL,1122,14,BRC,BRC,OP,writing,SELF
+TL,1122,14,BRC,BRC,OP,writing,SELF
+TL,1122,14,BRC,BRC,OP,writing,SELF
+TL,1122,14,BRC,BRC,OP,writing,SELF
+TL,1122,14,BRC,BRC,OP,writing,SELF
+TL,1122,14,BRC,BRC,OP,writing,SELF
+TL,1122,15,JOC,JOC,OP,looking at board,SELF
+TL,1122,15,JOC,JOC,OA,talking to GRG,SELF
+TL,1122,15,JOC,GRG,C,responds,NP
+TL,1122,15,JOC,JOC,OP,writing,SELF
+TL,1122,15,JOC,RAJ,P,asks JOC something,NP
+TL,1122,15,JOC,JOC,OA,talking,SELF
+TL,1122,15,JOC,RAJ,C,talking,NP
+TL,1122,15,JOC,JOC,OP,watching other students talk to T,SELF
+TL,1122,15,JOC,JOC,OP,sitting at desk,SELF
+TL,1122,15,JOC,JOC,OA,gives paper to GRG,SELF
+TL,1122,15,JOC,GRG,C,takes paper,NP
+TL,1122,15,JOC,JOC,OP,waiting for paper,SELF
+TL,1122,15,JOC,JOC,OP,waiting,SELF
+TL,1122,15,JOC,JOC,OP,sitting at desk looking through notebook,SELF
+TL,1122,15,JOC,JOC,OP,looking at BRC at the board,SELF
+TL,1122,15,JOC,JOC,OP,loking through notebook,SELF
+TL,1122,21,ANW,ANW,XP,reading a mad magezine,SELF
+TL,1122,21,ANW,ANW,XP,reading a mad magezine,SELF
+TL,1122,21,ANW,ANW,XA,talking to RES (off-task),SELF
+TL,1122,21,ANW,RES,C,responds,NP
+TL,1122,21,ANW,ANW,XP,reading mad magezine,SELF
+TL,1122,21,ANW,T,D,tells ANW to get to work,TEACHER
+TL,1122,21,ANW,ANW,XP,back to reading the mad mabezine,SELF
+TL,1122,21,ANW,ANW,XP,writing in the magezine,SELF
+TL,1122,21,ANW,ANW,XP,reading mad magezine,SELF
+TL,1122,21,ANW,ANW,XP,reading mad magezine,SELF
+TL,1122,21,ANW,ANW,XP,reading mad magezine,SELF
+TL,1122,21,ANW,ANW,XP,reading mad magezine,SELF
+TL,1122,21,ANW,ANW,XP,reading mad magezine,SELF
+TL,1122,22,MEM,MEM,OP,working on math,SELF
+TL,1122,22,MEM,MEM,OP,looking in desk,SELF
+TL,1122,22,MEM,MEM,XP,playing with a poster under desk,SELF
+TL,1122,22,MEM,MEM,OP,watching MAK at the board,SELF
+TL,1122,22,MEM,MEM,OP,watching MAK at the board,SELF
+TL,1122,22,MEM,MEM,OP,watching MAK at the board,SELF
+TL,1122,22,MEM,MEM,OP,watching MAK at the board,SELF
+TL,1122,22,MEM,SAR,P,asks something,NP
+TL,1122,22,MEM,MEM,OA,talks to SAR about math,SELF
+TL,1122,22,MEM,SAR,C,talking,NP
+TL,1122,22,MEM,MEM,OP,listening to MAK,SELF
+TL,1122,22,MEM,MEM,OP,listening to MAK,SELF
+TL,1122,22,MEM,MEM,OP,listening to MAK,SELF
+TL,1122,22,MEM,MEM,OP,listening to MAK,SELF
+TL,1122,23,MEM,MEM,OP,watching student at board,SELF
+TL,1122,23,MEM,MEM,OP,watching student at board,SELF
+TL,1122,23,MEM,MEM,OP,watching student at board,SELF
+TL,1122,23,MEM,MEM,OP,watching student at board,SELF
+TL,1122,23,MEM,MEM,OP,watching student at board,SELF
+TL,1122,23,MEM,MEM,OP,looking at paper,SELF
+TL,1122,23,MEM,SAR,P,asks MEM something,NP
+TL,1122,23,MEM,MEM,OA,respomds to SAR,SELF
+TL,1122,23,MEM,SAR,C,listens,NP
+TL,1122,23,MEM,MEM,OP,looks at board,SELF
+TL,1122,23,MEM,MEM,OP,looks at paper,SELF
+TL,1122,23,MEM,MEM,OP,looks at board,SELF
+TL,1122,23,MEM,MEM,OP,looks at board,SELF
+TL,1122,23,MEM,MEM,OP,looks at board,SELF
+TL,1122,23,MEM,MEM,OP,looks at board,SELF
+TL,1122,23,MEM,MEM,OP,looks at board,SELF
+TL,1122,23,MEM,MEM,OA,raises hand,SELF
+TL,1122,23,MEM,MEM,OP,looks at board,SELF
+TL,1122,23,MEM,MEM,OA,raises hand,SELF
+TL,1122,23,MEM,MEM,OA,raises hand,SELF
+TL,1122,24,GRG,GRG,OA,raising hand,SELF
+TL,1122,24,GRG,GRG,OA,raising hand,SELF
+TL,1122,24,GRG,GRG,OP,listening to MAK,SELF
+TL,1122,24,GRG,GRG,OP,listening to MAK,SELF
+TL,1122,24,GRG,GRG,XP,yawning,SELF
+TL,1122,24,GRG,GRG,OA,raising hand,SELF
+TL,1122,24,GRG,GRG,OP,sitting at desk,SELF
+TL,1122,24,GRG,GRG,OP,sitting at desk,SELF

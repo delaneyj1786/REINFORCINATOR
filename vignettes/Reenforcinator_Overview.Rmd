@@ -297,8 +297,11 @@ sub2_clean <- sub2 %>% filter(!is.na(BEH))
 
 sub3 <- read_csv("C:/Users/delan/Dropbox/My PC (LAPTOP-AEGRJVG9)/Desktop/Sage Analysis/jamedat3_sub3.csv")
 dim(sub3)
+require(tidyverse)
+sub3 <- sub3 %>% filter(!is.na(BEH))
 sub3_clean<-na.omit(sub3)
 dim(sub3)
+write_csv(sub3,"jamesdat3_sub3c.csv")
 ```
 
 
