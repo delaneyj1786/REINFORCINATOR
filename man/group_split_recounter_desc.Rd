@@ -13,9 +13,11 @@ group_split_recounter_desc(x)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
-}
+  \item{list}{A split data frame}
+  \item{behaviorstream}{A column representing the observation stream. Contains actor behaviors and environmental (or partner) consequences}
+  \item{behavior}{A character string indicating the target behavior to be reinforced}
+  \item{consequence}{A character string indicating the environmental consequence acting as a reinforcer}
+  \item{actor}{An optional argument indicating the column containing the actor ID}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -43,15 +45,18 @@ group_split_recounter_desc(x)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+
+# Create a split DF
+split_df_1 <- group_splitter(two_person_picture,behaviorstream = BEH,
+                             behavior = "o", consequence = "A", group = "TAR")
+
+group_split_recounter_desc(split_df_1,"BEH","o","A","TAR")
 
 ## The function is currently defined as
-function (x)
-{
-  }
+group_split_recounter_desc <- function(list, behaviorstream, behavior,consequence,actor){
+  list %>% map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$descriptive_statistics)
 }
+
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
 % \keyword{ ~kwd1 }
