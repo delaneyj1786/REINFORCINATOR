@@ -375,3 +375,14 @@ ggplot(filter(sum_one_sub3, recount_sequence != "R"),aes(x = sub_series, y = sub
   xlab("Sub-Series") + 
   ylab("Average Sequence Probabilities")
 ```
+
+
+# recounter group test 
+```{r dd}
+
+recounter_desc <- function(list, behaviorstream, behavior,consequence,actor){
+  list %>% map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$descriptive_statistics) 
+}
+
+
+```

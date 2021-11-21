@@ -647,6 +647,13 @@ group_split_recounter<- function(list, behaviorstream, behavior,consequence,acto
   # group_split_recounter(gs_test,behaviorstream = "BEH","x","A",actor = "TAR")
 }
 
+# Group Split recounter for descriptives
+
+group_split_recounter_desc <- function(list, behaviorstream, behavior,consequence,actor){
+  list %>% map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$descriptive_statistics)
+}
+
+
 
 ###################
 ### Reformatting Functions ####
