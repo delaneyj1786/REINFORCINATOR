@@ -684,9 +684,6 @@ partner_recoder <- function(data,behaviorstream, type, consequence, partner){
   data %>% dplyr::mutate(newcol = ifelse(!!behaviorstream == consequence & !!type == partner, paste(partner,consequence,sep="_"),!!behaviorstream))
 }
 
-
-
-
 group_filter <- function(data, GROUP1, GROUP2, DV){
   #  https://stackoverflow.com/questions/58846126/using-rlang-quasiquotation-with-dplyr-join-functions
   data <- data.frame(dat)
