@@ -54,26 +54,12 @@ Returns a list of dataframes grouped by GROUP1 and GROUP2
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
+
 # Filtering to non-empty dataframes for piping to group_split_recounter
+
 group_splitter2(two_person_picture,behaviorstream = "BEH", behavior = "o", consequence = "A", group1 = "VIDELT", group2 = "TAR", filt = TRUE)
 
 # Not filtering
 group_splitter2(two_person_picture,behaviorstream = "BEH", behavior = "o", consequence = "A", group1 = "VIDELT", group2 = "TAR")
-
-## The function is currently defined as
-function(data, behaviorstream, behavior,consequence,
-                    group1,group2,
-                    actor = NULL, missing_data = NULL,
-                    contingency = NULL, filt = NULL){
-  # this just splits the data frame
-  group1 <- as.factor(group1)
-  group2 <- as.factor(group2)
-  split_dat_2 <-split(data, f = (c(data[,group1],data[,group2])))
-if(is.null(filt) == FALSE){
-  #double_list<-double_split_test[sapply(double_split_test, function(x) dim(x)[1]) > 0]
-  split_dat_2[sapply(split_dat_2, function(x) dim(x)[1]) > 0]
-}else{
-  split_dat_2
-}
 
 }
