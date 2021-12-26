@@ -42,42 +42,7 @@ Returns a tibble where indices in \bold{behaviorstream} corresponding to code 1 
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-> elevator
-# A tibble: 14 x 3
-   VIDELT TAR   BEH
-    <dbl> <chr> <chr>
- 1      1 S     o
- 2      1 S     x
- 3      1 S     x
- 4      1 S     x
- 5      1 S     A
- 6      1 S     o
- 7      1 S     x
- 8      2 S     x
- 9      2 S     x
-10      2 S     A
-11      2 S     o
-12      2 S     o
-13      2 S     o
-14      2 S     x
-> elevator$BEH
- [1] "o" "x" "x" "x" "A" "o" "x" "x" "x" "A" "o" "o" "o" "x"
-> combiner(elevator,BEH,"o","x")
-   VIDELT TAR BEH Combined
-1       1   S   o      o_x
-2       1   S   x      o_x
-3       1   S   x      o_x
-4       1   S   x      o_x
-5       1   S   A        A
-6       1   S   o      o_x
-7       1   S   x      o_x
-8       2   S   x      o_x
-9       2   S   x      o_x
-10      2   S   A        A
-11      2   S   o      o_x
-12      2   S   o      o_x
-13      2   S   o      o_x
-14      2   S   x      o_x
+
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
