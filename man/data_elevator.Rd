@@ -58,7 +58,7 @@ recount_elevator_tables<-tables_recount_table(recounted_elevator)
 #2      1 S     x
 #3      1 S     x
 
-$`2`
+#$`2`
 # A tibble: 7 x 3
 #  VIDELT TAR   BEH
 #   <dbl> <chr> <chr>
