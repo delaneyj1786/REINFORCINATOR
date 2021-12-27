@@ -38,35 +38,36 @@ Returns a tibble where indices in \bold{behaviorstream} corresponding to code 1 
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-> elevator
+#> elevator
 # A tibble: 14 x 3
-   VIDELT TAR   BEH
-    <dbl> <chr> <chr>
- 1      1 S     o
- 2      1 S     x
- 3      1 S     x
- 4      1 S     x
- 5      1 S     A
- 6      1 S     o
- 7      1 S     x
- 8      2 S     x
- 9      2 S     x
-10      2 S     A
-11      2 S     o
-12      2 S     o
-13      2 S     o
-14      2 S     x
-> deleter(elevator,BEH,"o")
-  VIDELT TAR BEH
-1      1   S   x
-2      1   S   x
-3      1   S   x
-4      1   S   A
-5      1   S   x
-6      2   S   x
-7      2   S   x
-8      2   S   A
-9      2   S   x
+#   VIDELT TAR   BEH
+#    <dbl> <chr> <chr>
+# 1      1 S     o
+# 2      1 S     x
+# 3      1 S     x
+# 4      1 S     x
+# 5      1 S     A
+# 6      1 S     o
+# 7      1 S     x
+# 8      2 S     x
+# 9      2 S     x
+#10      2 S     A
+#11      2 S     o
+#12      2 S     o
+#13      2 S     o
+#14      2 S     x
+
+#> deleter(elevator,BEH,"o")
+#  VIDELT TAR BEH
+#1      1   S   x
+#2      1   S   x
+#3      1   S   x
+#4      1   S   A
+#5      1   S   x
+#6      2   S   x
+#7      2   S   x
+#8      2   S   A
+#9      2   S   x
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):

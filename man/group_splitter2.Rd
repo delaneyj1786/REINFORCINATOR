@@ -57,9 +57,10 @@ Returns a list of dataframes grouped by GROUP1 and GROUP2
 
 # Filtering to non-empty dataframes for piping to group_split_recounter
 
-group_splitter2(two_person_picture,behaviorstream = "BEH", behavior = "o", consequence = "A", group1 = "VIDELT", group2 = "TAR", filt = TRUE)
+# group_splitter2(two_person_picture,behaviorstream = "BEH", behavior = "o", consequence = "A",   # group1 = "VIDELT", group2 = "TAR", filt = TRUE)
 
 # Not filtering
-group_splitter2(two_person_picture,behaviorstream = "BEH", behavior = "o", consequence = "A", group1 = "VIDELT", group2 = "TAR")
+# group_splitter2(two_person_picture,behaviorstream = "BEH", behavior = "o", consequence = "A",
+# group1 = "VIDELT", group2 = "TAR")
 
 }
