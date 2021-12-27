@@ -54,40 +54,33 @@ ggplot(test_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (r
 # To show the average sequence probabilities for each sub-series
 
 ## Summarize the means per sub-series
-sum_one<- test_df_rc %>% group_by(sub_series, recount_sequence) %>%
-  summarize(sub_series_mean = mean(sub_series_run_prob)) %>% ungroup()
 
-ggplot(filter(sum_one, recount_sequence != "R"),aes(x = sub_series, y = sub_series_mean, color = (recount_sequence))) + geom_point() + geom_line() +
-  ggtitle("Average Sub-Series Probabilities By Sequence") +
-  xlab("Sub-Series") +
-  ylab("Average Sequence Probabilities")
+#sum_one<- test_df_rc %>% group_by(sub_series, recount_sequence) %>%
+#  summarize(sub_series_mean = mean(sub_series_run_prob)) %>% ungroup()
+
+#ggplot(filter(sum_one, recount_sequence != "R"),aes(x = sub_series, y = #sub_series_mean, color = (recount_sequence))) + geom_point() + geom_line() +
+#  ggtitle("Average Sub-Series Probabilities By Sequence") +
+#  xlab("Sub-Series") +
+#  ylab("Average Sequence Probabilities")
 
 
-## To plot the overall series with the overall Sequence Probabilities juxtaposed on the series
+## To plot the overall series with the overall Sequence Probabilities #juxtaposed on the series
+
 # Find the overall average by sequence
-overall_average <- sum_one %>% group_by(recount_sequence) %>% summarize(mean_sub_mean = mean(sub_series_mean)) %>% ungroup() %>% filter(recount_sequence != "R")
+#overall_average <- sum_one %>% group_by(recount_sequence) %>% summarize
+#(mean_sub_mean = mean(sub_series_mean)) %>% ungroup() %>% filter
+#(recount_sequence != "R")
 
 # Merge summary with the original dataset so we can add the means to the plot
-average_df<-left_join(test_df_rc, overall_average, by = "recount_sequence")
+
+#average_df<-left_join(test_df_rc, overall_average, by = "recount_sequence")
 
 
-ggplot(average_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence))) + geom_point() + geom_line(aes(y = mean_sub_mean)) +
-  ggtitle("Overall Sequence Average") +
-  xlab("Observation Sequence") +
-  ylab("Running Probabilities of Target")
+#ggplot(average_df,aes(x = recount_stream_index, y = sub_series_run_prob, #color = (recount_sequence))) + geom_point() + geom_line(aes(y = #mean_sub_mean)) +
+#  ggtitle("Overall Sequence Average") +
+#  xlab("Observation Sequence") +
+#  ylab("Running Probabilities of Target")
 
-
-## The function is currently defined as
-
-function(recounted_df){
-
-  recounted_df  <- recounted_df %>% dplyr::group_by(sub_series) %>%
-    mutate(sub_series_sum = cumsum(recount_recode_numeric),   # uses the total sum ... not running
-           sub_series_total = max(recount_stream_index),
-           sub_series_cum_run_prob = sub_series_sum / sub_series_total, # total sum as denom
-           sub_series_run_prob = sub_series_sum / recount_stream_index) %>% ungroup()
-
-  recounted_df
 
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
