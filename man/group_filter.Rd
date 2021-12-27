@@ -97,40 +97,44 @@ function(dat, GROUP1, GROUP2, DV)
   vid_sum<-vid_sum %>% dplyr::mutate(prop = count/n)
   vid_sum
   }
+
   group_filter(elevator,VIDELT, TAR,BEH)
+
 # A tibble: 6 x 6
-  VIDELT TAR   BEH   count     n  prop
-   <dbl> <chr> <chr> <int> <int> <dbl>
-1      1 S     A         1     7 0.143
-2      1 S     o         2     7 0.286
-3      1 S     x         4     7 0.571
-4      2 S     A         1     7 0.143
-5      2 S     o         3     7 0.429
-6      2 S     x         3     7 0.429
+#  VIDELT TAR   BEH   count     n  prop
+#   <dbl> <chr> <chr> <int> <int> <dbl>
+#1      1 S     A         1     7 0.143
+#2      1 S     o         2     7 0.286
+#3      1 S     x         4     7 0.571
+#4      2 S     A         1     7 0.143
+#5      2 S     o         3     7 0.429
+#6      2 S     x         3     7 0.429
 
 
-> two_person_picture
+#> two_person_picture
 # A tibble: 30 x 3
-   VIDELT TAR   BEH
-    <dbl> <chr> <chr>
- 1      1 ABE   x
- 2      1 ABE   x
- 3      1 ABE   x
- 4      1 ABE   o
+#   VIDELT TAR   BEH
+#    <dbl> <chr> <chr>
+# 1      1 ABE   x
+# 2      1 ABE   x
+# 3      1 ABE   x
+# 4      1 ABE   o
 
- > group_filter(two_person_picture,VIDELT, TAR,BEH)
-`summarise()` has grouped output by 'VIDELT', 'TAR'. You can override using the `.groups` argument.
-`summarise()` has grouped output by 'VIDELT'. You can override using the `.groups` argument.
-Joining, by = c("VIDELT", "TAR")
+# > group_filter(two_person_picture,VIDELT, TAR,BEH)
+#`summarise()` has grouped output by 'VIDELT', 'TAR'. You can override using the #`.groups` argument.
+#`summarise()` has grouped output by 'VIDELT'. You can override using the `##
+#.groups` argument.
+#Joining, by = c("VIDELT", "TAR")
+
 # A tibble: 6 x 6
-  VIDELT TAR   BEH   count     n  prop
-   <dbl> <chr> <chr> <int> <int> <dbl>
-1      1 ABE   A         2    15 0.133
-2      1 ABE   o         7    15 0.467
-3      1 ABE   x         6    15 0.4
-4      2 JAN   A         2    15 0.133
-5      2 JAN   o         7    15 0.467
-6      2 JAN   x         6    15 0.4
+#  VIDELT TAR   BEH   count     n  prop
+#   <dbl> <chr> <chr> <int> <int> <dbl>
+#1      1 ABE   A         2    15 0.133
+#2      1 ABE   o         7    15 0.467
+#3      1 ABE   x         6    15 0.4
+#4      2 JAN   A         2    15 0.133
+#5      2 JAN   o         7    15 0.467
+#6      2 JAN   x         6    15 0.4
 }
 
 
