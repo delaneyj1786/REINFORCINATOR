@@ -29,20 +29,22 @@ An example dataset to illustrate how reinforcement detection may appear in a one
 data(picture_stream)
 
 # Overall Probabilities
-$descriptive_statistics$prob_tar_uncorrected
-[1] 0.56
+#$descriptive_statistics$prob_tar_uncorrected
+#[1] 0.56
 
-$descriptive_statistics$prob_tar_corrected
-[1] 0.6363636
+#$descriptive_statistics$prob_tar_corrected
+#[1] 0.6363636
 
 ## Recounted Single Data Frame
-recounted_picture<-recounter(picture_stream,BEH,"o","A","TAR")$recounted_data_frame
+
+#recounted_picture<-recounter(picture_stream,BEH,"o","A","TAR"
+#)$recounted_data_frame
 
 ## Recounted Contingency Table Stats
 recounted_picture_tables <- tables_recount_table(recounted_picture)
 
-$output_list$avg_prob
-     B_NT       B_T      A_NT       A_T
-0.6348039 0.3651961 0.2684524 0.7315476
+#$output_list$avg_prob
+#     B_NT       B_T      A_NT       A_T
+#0.6348039 0.3651961 0.2684524 0.7315476
 }
 \keyword{datasets}
