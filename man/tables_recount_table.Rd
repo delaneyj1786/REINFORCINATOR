@@ -61,10 +61,10 @@ Produces two lists. \bold{process_list} and \bold{output_list}. \bold{process_li
 # recounted data frame
 recounted_elevator_recounted_df<-recounter(elevator, BEH,"o","A")$recounted_data_frame
 
-For process list:
+# For process list:
 tables_recount_table(elevator_recounted)$process_list
 
-For output list:
+# For output list:
 tables_recount_table(elevator_recounted)$output_list
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
