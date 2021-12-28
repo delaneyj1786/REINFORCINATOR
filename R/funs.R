@@ -157,7 +157,7 @@ recounter<-function(data,behaviorstream,
 
       #10 relevel
       recount_df<- recount_df %>%
-        mutate(recount_sequence = fct_relevel(recount_sequence, "B","A","R"))
+        mutate(recount_sequence = forcats::fct_relevel(recount_sequence, "B","A","R"))
 
       #11 recount numeric to recode
       recount_df<- recount_df %>%
@@ -279,7 +279,7 @@ recounter<-function(data,behaviorstream,
 
       #10 relevel
       recount_df<- recount_df %>%
-        mutate(recount_sequence = fct_relevel(recount_sequence, "B","A","R"))
+        mutate(recount_sequence = forcats::fct_relevel(recount_sequence, "B","A","R"))
 
       #11 recount numeric to recode
       recount_df<- recount_df %>%
@@ -449,7 +449,7 @@ Recounter5 <- function(data,behaviorstream,
 
     #10 relevel
     recount_df<- recount_df %>%
-      mutate(recount_sequence = fct_relevel(recount_sequence, "B","A","R"))
+      mutate(recount_sequence = forcats::fct_relevel(recount_sequence, "B","A","R"))
 
     #11 recount numeric to recode
     recount_df<- recount_df %>%
@@ -575,7 +575,7 @@ Recounter2 <-function(behaviorstream, behavior,consequence, actor = NULL, missin
 
     #10 relevel
     recount_df<- recount_df %>%
-      mutate(recount_sequence = fct_relevel(recount_sequence, "B","A","R"))
+      mutate(recount_sequence = forcats::fct_relevel(recount_sequence, "B","A","R"))
 
     #11 recount numeric to recode
     recount_df<- recount_df %>%
