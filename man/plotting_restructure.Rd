@@ -45,10 +45,12 @@ test_df_rc <- recounter(two_person_picture,BEH,"o","A")$recounted_data_frame
 # To plot the running probability for each sub-series.
 # This shows the shift in the distribution across the sequence.
 
-ggplot(test_df,aes(x = recount_stream_index, y = sub_series_run_prob, color = (recount_sequence), group = sub_series)) + geom_point() +facet_grid(~sub_series) +
-  ggtitle("Running Sequence Probabilities By Sub-Series")+
-  xlab("Observation Sequence") +
-  ylab("Running Probability")
+#ggplot2::ggplot(test_df_rc,ggplot2::aes(x = recount_stream_index, y = sub_series_run_prob, color = #
+#(recount_sequence), group = sub_series)) + ggplot2::geom_point() +
+#ggplot2::facet_grid(~sub_series) +
+#  ggplot2::ggtitle("Running Sequence Probabilities By Sub-Series")+
+#  ggplot2::xlab("Observation Sequence") +
+#  ggplot2::ylab("Running Probability")
 
 
 # To show the average sequence probabilities for each sub-series
