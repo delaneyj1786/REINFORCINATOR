@@ -26,7 +26,7 @@ An example dataset to illustrate how reinforcement detection may appear in a one
 %%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
-data(picture_stream)
+picture_stream
 
 # Overall Probabilities
 #$descriptive_statistics$prob_tar_uncorrected
@@ -37,8 +37,8 @@ data(picture_stream)
 
 ## Recounted Single Data Frame
 
-#recounted_picture<-recounter(picture_stream,BEH,"o","A","TAR"
-#)$recounted_data_frame
+recounted_picture<-recounter(picture_stream,BEH,"o","A","TAR"
+)$recounted_data_frame
 
 ## Recounted Contingency Table Stats
 recounted_picture_tables <- tables_recount_table(recounted_picture)
