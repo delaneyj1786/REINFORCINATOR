@@ -66,7 +66,8 @@ test_df_rc <- recounter(two_person_picture,BEH,"o","A")$recounted_data_frame
 #  ylab("Average Sequence Probabilities")
 
 
-## To plot the overall series with the overall Sequence Probabilities #juxtaposed on the series
+## To plot the overall series with the overall Sequence Probabilities
+#juxtaposed on the series
 
 # Find the overall average by sequence
 #overall_average <- sum_one %>% group_by(recount_sequence) %>% summarize
