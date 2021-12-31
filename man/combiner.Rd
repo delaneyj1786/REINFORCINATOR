@@ -19,7 +19,7 @@ combiner(data, behaviorstream,code1,code2)
   \item{code 2}{A character indiciating the second code to be combined}
 %%     ~~Describe \code{x} here~~
 }
-}
+
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
