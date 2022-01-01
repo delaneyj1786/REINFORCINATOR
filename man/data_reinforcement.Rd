@@ -15,3 +15,4 @@ An example dataset to illustrate how reinforcement may appear in a one person ob
     \item{\code{TAR}}{a character vector indicating the actor being observed}
     \item{\code{BEH}}{a character vector indicating the behavior is target ('o'), reinforcer ('A') or behavioral non-target ('x')}
 }
+}

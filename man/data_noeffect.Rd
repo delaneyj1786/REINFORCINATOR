@@ -15,4 +15,5 @@ An example dataset to illustrate how a non functional consequence may appear in 
     \item{\code{TAR}}{a character vector indicating the actor being observed}
     \item{\code{BEH}}{a character vector indicating the behavior is target ('o'), reinforcer ('A') or behavioral non-target ('x')}
 }
+}
 
