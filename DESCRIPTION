@@ -14,7 +14,15 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: REINFORCINATOR
+RemoteUsername: delaneyj1786
 Remotes: https://github.com/delaneyj1786/REINFORCINATOR
+GithubRepo: REINFORCINATOR
+GithubUsername: delaneyj1786
+GithubRef: master
+GithubSHA1: 62c0ba935ec6792236bb8642353ab6529bf68fad
 Imports: 
     dplyr,
     forcats,
