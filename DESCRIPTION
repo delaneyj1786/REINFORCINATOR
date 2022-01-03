@@ -14,6 +14,7 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Remotes: https://github.com/delaneyj1786/REINFORCINATOR
 Imports: 
     dplyr,
     forcats,
