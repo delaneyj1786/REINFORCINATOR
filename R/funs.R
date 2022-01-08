@@ -843,30 +843,59 @@ allison_liker_z <- function(pta,ptt,pa,n,k){
 
 
 ## DATASETS #############
+# The elevator data set contains
+
+# ABE shows a mixed pattern - where he pushes (no stop) and pushes again and it stops (episode 1)
+# Episode 2 there is a prompt stop
+# This reinforces pushing again for episode 3 where it eventually stops
+# We can assume here that the pushing / stop pattern has been reinforced in the past and that the
+## mix of stop / non stop reinforces a MAINTENANCE
+# We can also see the contingency change here...
+
+
+# JAN shows a change in reinforcing NOPUSH
+# for the first two episodes NOT Pushing yields a stop
+# In episode 3 there is a quick change, where not pushing no longer stops the elevator
+# This leads to an increase in Pushing which seems to reinforce more pushing
+
 
 elevator<-tidyr::tibble(
-  VIDELT = c(rep(1,7),rep(2,7)),
-  TAR = rep("S",14),
-  BEH = c("o","x",
-          "x","x",
-          "A",
-          "o","x","x","x",
-          "A",
-          "o","o","o","x")
+  EPISODE = c(rep(1,4),rep(2,2), rep(3,6),
+              rep(1,2),rep(2,2),rep(3,4),rep(4,2)),
+  PERSON = c(rep("ABE",12),rep("JAN",10)),
+  TIME = c(1,2,3,4,5,6,7,8,9,10,11,12,
+           1,2,3,4,5,6,7,8,9,10,11,12),
+  BEHAVIOR = c("PUSH","NOTSTOP","PUSH","STOP", # CONTINGENCY (.5)
+          "PUSH","STOP", # (1)
+          "PUSH","NOTSTOP","PUSH","NOTSTOP","PUSH","STOP", # no reinforcement (.33)
+          "NOPUSH","STOP", # (0)
+          "NOPUSH","STOP", # (0)
+          "NOPUSH","NOSTOP","PUSH","STOP", # (1)
+          "PUSH","STOP", # (1)
+          "PUSH","NOSTOP","PUSH","STOP") # (.5)
 )
 
 
 # Note this is all contingent
+# A classroom example
+# One focal person
+# One episode consisting of 25 observations
+
+# The overall probability of ON-TASK (ON)
+# The strength of the relationship between ACTIVE an APPROVAL decreases over time
+# HOWEVER - active INCREASES OVER TIME
+# This suggests a REINFORCING EFFECT (Despite low contingency!)
+
 picture_stream<-tidyr::tibble(
-  VIDELT = rep(1,25),
-  TAR = rep("S",25),
-  BEH = c("x","x","x","o", #4
-          "A", #1
-          "o","x","o", #3
-          "A", #1
-          "o","o","x","x","o","o","x","o", #8
-          "A", #1
-          "o","o","o","o","o","o","x")
+  EPISODE = rep(1,25),
+  PERSON = rep("S",25),
+  BEHAVIOR = c("PASSIVE","PASSIVE","PASSIVE","ACTIVE", #4
+          "APPROVAL", #1
+          "ACTIVE","PASSIVE","PASSIVE", #3
+          "APPROVAL", #1
+          "ACTIVE","ACTIVE","PASSIVE","PASSIVE","ACTIVE","ACTIVE","PASSIVE","ACTIVE", #8
+          "APPROVAL", #1
+          "ACTIVE","ACTIVE","ACTIVE","ACTIVE","ACTIVE","ACTIVE","PASSIVE")
 )
 
 #
