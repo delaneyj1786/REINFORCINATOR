@@ -898,22 +898,30 @@ picture_stream<-tidyr::tibble(
           "ACTIVE","ACTIVE","ACTIVE","ACTIVE","ACTIVE","ACTIVE","PASSIVE")
 )
 
-#
+#This dataset consists of two DUPLICATE classroom observations (say one is a mistake)
+#This is meant to illustrate the effects of nesting (for GLM) and repeated measurements (fixing the 'fixed effects')
+
+# The overall probability of ACTIVE is :
+# The overall probability of PASSIVE is :
+# The contingency of APPROVAL and ACTIVE is :
+# Overall number of observations is :
+
+# BY PERSON STATS:
 
 two_person_picture<-tidyr::tibble(
   VIDELT = c(rep(1,7),rep(2,8), rep(3,7), rep(4,8)),
   TAR = c(rep("ABE",15),rep("JAN",15)),
-  BEH = c("x","x","x","o", #4
-          "A", #1
-          "o","x", ### end 1
-          "o", #3
-          "A", #1
-          "o","o","x","x","o","o", #6 # end two
-          "x","x","x","o", #4
+  BEH = c("PASSIVE","PASSIVE","PASSIVE","ACTIVE", #4
+          "APPROVAL", #1
+          "ACTIVE","PASSIVE", ### end 1
+          "ACTIVE", #3
+          "APPROVAL", #1
+          "ACTIVE","ACTIVE","x","x","ACTIVE","ACTIVE", #6 # end two
+          "PASSIVE","PASSIVE","PASSIVE","ACTIVE", #4
           "A",
-          "o","x","o",
+          "ACTIVE","x","ACTIVE",
           "A",
-          "o","o","x","x","o","o"),
+          "ACTIVE","ACTIVE","x","x","ACTIVE","ACTIVE"),
   PART = c("SELF","SELF","SELF","SELF",
            "FRIEND",
            "SELF","SELF",
