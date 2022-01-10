@@ -909,20 +909,20 @@ picture_stream<-tidyr::tibble(
 # BY PERSON STATS:
 
 two_person_picture<-tidyr::tibble(
-  VIDELT = c(rep(1,7),rep(2,8), rep(3,7), rep(4,8)),
-  TAR = c(rep("ABE",15),rep("JAN",15)),
-  BEH = c("PASSIVE","PASSIVE","PASSIVE","ACTIVE", #4
+  EPISODE = c(rep(1,7),rep(2,8), rep(3,7), rep(4,8)),
+  PERSON = c(rep("ABE",15),rep("JAN",15)),
+  BEHAVIOR = c("PASSIVE","PASSIVE","PASSIVE","ACTIVE", #4
           "APPROVAL", #1
           "ACTIVE","PASSIVE", ### end 1
           "ACTIVE", #3
           "APPROVAL", #1
           "ACTIVE","ACTIVE","x","x","ACTIVE","ACTIVE", #6 # end two
           "PASSIVE","PASSIVE","PASSIVE","ACTIVE", #4
-          "A",
-          "ACTIVE","x","ACTIVE",
-          "A",
-          "ACTIVE","ACTIVE","x","x","ACTIVE","ACTIVE"),
-  PART = c("SELF","SELF","SELF","SELF",
+          "APPROVAL",
+          "ACTIVE","PASSIVE","ACTIVE",
+          "APPROVAL",
+          "ACTIVE","ACTIVE","PASSIVE","PASSIVE","ACTIVE","ACTIVE"),
+  PARTNER = c("SELF","SELF","SELF","SELF",
            "FRIEND",
            "SELF","SELF",
            "SELF",
@@ -935,38 +935,58 @@ two_person_picture<-tidyr::tibble(
            "SELF","SELF","SELF","SELF","SELF","SELF")
 )
 
+#Husband and Wife
+# https://d1wqtxts1xzle7.cloudfront.net/41643964/Predicting-Marital-Happiness-and-Stability-from-Newlywed-Interactions-with-cover-page-v2.pdf?Expires=1641778260&Signature=EDzEEzUA~c96uPyf44cmOO3LgBnlOicBj7cnbLWYyMrlR0cRGROUN~RBx10YzY9BquoUKLVUJ5xyFPXLcPNED6NQI7TyAJDqGsOgqOws4BvNvlN6eqK7nJmUWA8i8dhEM1mPsceQgzQBwlNc3KxSXABGorWMY5txMGqpZI5bZVedhN~8WvBgWnkwe57dD5oWVsFv91w44sqaFcVxVEJHsLtL2J62nEUAk7gMmegQcHZizo0qCJif48LXRzPcMLPxW2Jq264JlOfTUH9rFujnIxK2wNW9QZ2Xpl57T9P2H~QhNNO~2kCAJoHiFfS2sT-JWok63m876AxuWWS9rf3guA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
 
+# Codes
+# Positive : Interest , validation , affection, humor, joy
+# Negative : Disgust, Contempt, Belligerence, Domineering, Anger, Tension,
+### Defensiveness, Whining, sadness, stonewalling
+# Neutral
 
 noeffect<-tidyr::tibble(
-  VIDELT = rep(1,11),
-  TAR = rep("ABE",11),
-  BEH = c("o","x","x", #4
-          "A", #1
-          "o","x","x", #3
-          "A", #1
-          "o","x","x")
+  EPISODE = rep(1,11),
+  PERSON = rep("HUSBAND",11),
+  PARTNER = c("HUSBAND","WIFE","HUSBAND","WIFE",
+              "HUSBAND", "WIFE","HUSBAND", "WIFE",
+              "HUSBAND","WIFE","HUSBAND"),
+  BEHAVIOR = c("JOY","NEUTRAL",
+               "NEUTRAL", "NEUTRAL", #1
+          "JOY","INTEREST",
+          "NEUTRAL", "NEUTRAL", #1
+          "JOY","NEUTRAL",
+          "NEUTRAL")
 )
 
 
 punishment<-tidyr::tibble(
-  VIDELT = rep(2,11),
-  TAR = rep("ABE",11),
-  BEH = c("o","o","o", #4
-          "A", #1
-          "o","o","x", #3
-          "A", #1
-          "o","x","x")
+  EPISODE = rep(1,11),
+  PERSON = rep("HUSBAND",11),
+  PARTNER = c("HUSBAND","WIFE","HUSBAND","WIFE",
+              "HUSBAND", "WIFE","HUSBAND", "WIFE",
+              "HUSBAND","WIFE","HUSBAND"),
+  BEHAVIOR = c("JOY","NEUTRAL",
+               "JOY", "NEUTRAL", #1
+               "JOY","DISGUST",
+               "NEUTRAL", "NEUTRAL", #1
+               "NEUTRAL","VALIDATION",
+               "NEUTRAL")
 )
 
 
+
 reinforcement<-tidyr::tibble(
-  VIDELT = rep(3,11),
-  TAR = rep("ABE",11),
-  BEH = c("o","x","x", #4
-          "A", #1
-          "o","o","x", #3
-          "A", #1
-          "o","o","o")
+  EPISODE = rep(1,11),
+  PERSON = rep("HUSBAND",11),
+  PARTNER = c("HUSBAND","WIFE","HUSBAND","WIFE",
+              "HUSBAND", "WIFE","HUSBAND", "WIFE",
+              "HUSBAND","WIFE","HUSBAND"),
+  BEHAVIOR = c("JOY","NEUTRAL",
+               "NEUTRAL", "NEUTRAL", #1
+               "JOY","VALIDATION",
+               "JOY", "VALIDATION", #1
+               "JOY","NEUTRAL",
+               "JOY")
 )
 
 
