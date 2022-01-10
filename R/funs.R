@@ -861,7 +861,7 @@ elevator<-tidyr::tibble(
               rep(1,2),rep(2,2),rep(3,4),rep(4,2)),
   PERSON = c(rep("ABE",12),rep("JAN",10)),
   TIME = c(1,2,3,4,5,6,7,8,9,10,11,12,
-           1,2,3,4,5,6,7,8,9,10,11,12),
+           1,2,3,4,5,6,7,8,9,10),
   BEHAVIOR = c("PUSH","NOTSTOP","PUSH","STOP", # CONTINGENCY (.5)
           "PUSH","STOP", # (1)
           "PUSH","NOTSTOP","PUSH","NOTSTOP","PUSH","STOP", # no reinforcement (.33)
