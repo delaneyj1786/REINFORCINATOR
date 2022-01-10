@@ -640,8 +640,8 @@ if(is.null(filt) == FALSE){
 }
 
 group_split_recounter<- function(list, behaviorstream, behavior,consequence,actor){
-  list %>% map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$recounted_data_frame) %>%
-    map_dfr(~as.data.frame(.), .id = "GROUP")
+  list %>% purr::map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$recounted_data_frame) %>%
+    purr::map_dfr(~as.data.frame(.), .id = "GROUP")
 
   # ## TESTING
   # group_split_recounter(gs_test,behaviorstream = "BEH","x","A",actor = "TAR")
@@ -650,7 +650,7 @@ group_split_recounter<- function(list, behaviorstream, behavior,consequence,acto
 # Group Split recounter for descriptives
 
 group_split_recounter_desc <- function(list, behaviorstream, behavior,consequence,actor){
-  list %>% map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$descriptive_statistics)
+  list %>% purr::map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$descriptive_statistics)
 }
 
 
@@ -901,12 +901,21 @@ picture_stream<-tidyr::tibble(
 #This dataset consists of two DUPLICATE classroom observations (say one is a mistake)
 #This is meant to illustrate the effects of nesting (for GLM) and repeated measurements (fixing the 'fixed effects')
 
-# The overall probability of ACTIVE is :
+# OVERALL STATS
+# # ReenforcinateR::recounter(two_person_picture, BEHAVIOR,"ACTIVE","APPROVAL", actor = PERSON)$descriptive
+
+
+# The overall probability of ACTIVE is : # $prob_tar_uncorrected [1] 0.4666667 # $prob_tar_corrected # [1] 0.5384615
+
 # The overall probability of PASSIVE is :
 # The contingency of APPROVAL and ACTIVE is :
-# Overall number of observations is :
+# Overall number of observations is : # n_obs = 30
 
 # BY PERSON STATS:
+# split_two_person<-ReenforcinateR::group_splitter(two_person_picture,BEHAVIOR,"ACTIVE","APPROVAL",group = "PERSON")
+ReenforcinateR::group_split_recounter_desc(split_two_person,"BEHAVIOR","ACTIVE","APPROVAL","TAR")
+
+
 
 two_person_picture<-tidyr::tibble(
   EPISODE = c(rep(1,7),rep(2,8), rep(3,7), rep(4,8)),
@@ -935,9 +944,24 @@ two_person_picture<-tidyr::tibble(
            "SELF","SELF","SELF","SELF","SELF","SELF")
 )
 
+
+# $n_tar
+# n_targets
+# 1        14
+# $n_reinf
+# n_reinforcers
+# 1             4
+# $n_actor
+# n_unique_actors
+# 1               2
+# n_cont
+# 1      4
+
+
+
+
 #Husband and Wife
 # https://d1wqtxts1xzle7.cloudfront.net/41643964/Predicting-Marital-Happiness-and-Stability-from-Newlywed-Interactions-with-cover-page-v2.pdf?Expires=1641778260&Signature=EDzEEzUA~c96uPyf44cmOO3LgBnlOicBj7cnbLWYyMrlR0cRGROUN~RBx10YzY9BquoUKLVUJ5xyFPXLcPNED6NQI7TyAJDqGsOgqOws4BvNvlN6eqK7nJmUWA8i8dhEM1mPsceQgzQBwlNc3KxSXABGorWMY5txMGqpZI5bZVedhN~8WvBgWnkwe57dD5oWVsFv91w44sqaFcVxVEJHsLtL2J62nEUAk7gMmegQcHZizo0qCJif48LXRzPcMLPxW2Jq264JlOfTUH9rFujnIxK2wNW9QZ2Xpl57T9P2H~QhNNO~2kCAJoHiFfS2sT-JWok63m876AxuWWS9rf3guA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
-
 # Codes
 # Positive : Interest , validation , affection, humor, joy
 # Negative : Disgust, Contempt, Belligerence, Domineering, Anger, Tension,
