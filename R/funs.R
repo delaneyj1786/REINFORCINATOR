@@ -640,17 +640,14 @@ if(is.null(filt) == FALSE){
 }
 
 group_split_recounter<- function(list, behaviorstream, behavior,consequence,actor){
-  list %>% purr::map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$recounted_data_frame) %>%
-    purr::map_dfr(~as.data.frame(.), .id = "GROUP")
-
-  # ## TESTING
-  # group_split_recounter(gs_test,behaviorstream = "BEH","x","A",actor = "TAR")
+  list %>% purrr::map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$recounted_data_frame) %>%
+    purrr::map_dfr(~as.data.frame(.), .id = "GROUP")
 }
 
 # Group Split recounter for descriptives
 
 group_split_recounter_desc <- function(list, behaviorstream, behavior,consequence,actor){
-  list %>% purr::map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$descriptive_statistics)
+  list %>% purrr::map(~Recounter5(.x,behaviorstream,behavior,consequence,actor)$descriptive_statistics)
 }
 
 
