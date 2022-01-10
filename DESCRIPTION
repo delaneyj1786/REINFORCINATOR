@@ -28,4 +28,5 @@ Imports:
     forcats,
     ggplot2,
     tibble,
-    tidyr
+    tidyr,
+    purr
