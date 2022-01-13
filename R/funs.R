@@ -867,7 +867,7 @@ elevator<-tidyr::tibble(
           "PUSH","NOTSTOP","PUSH","NOTSTOP","PUSH","STOP", # no reinforcement (.33)
           "NOPUSH","STOP", # (0)
           "NOPUSH","STOP", # (0)
-          "NOPUSH","NOSTOP","PUSH","STOP", # (1)
+          "NOPUSH","NOSTOP","PUSH","STOP", # (1)8
           "PUSH","STOP") # (.5)
 )
 
